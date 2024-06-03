@@ -8,8 +8,10 @@ body {
     background: black;
 }
 
-#caption {
-    user-select: none;
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(../fonts/Manrope-Bold.ttf);
 }
 
 #canvas {
@@ -19,14 +21,32 @@ body {
     left: 0;
 }
 
-h1 {
+.caption-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #feb52b;
+}
+
+.title {
+    text-align: center;
+    color: #feb42b;
     font-size: 80px;
     font-weight: bold;
     font-family: 'Manrope';
+    text-shadow: 2px 2px #930404;
+}
+
+.caption {
+    text-align: center;
+    color: #feb42b;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Manrope';
+    text-shadow: 2px 2px #930404;
+}
+
+.non-selectable-text {
+    user-select: none;
 }
