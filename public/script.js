@@ -88,7 +88,7 @@ class Effect {
             x: 0,
             y: 0,
             pressed: false,
-            radius: 100
+            radius: this.calculateMouseInteractionRadius()
         }
 
         this.listenToResizeEvent()
@@ -210,6 +210,7 @@ class Effect {
         const newNumberOfParticles = this.calculateNumberOfParticles()
         this.resizeNumberOfParticles(newNumberOfParticles)
 
+        this.mouse.radius = this.calculateMouseInteractionRadius()
 
         this.particles.forEach( (particle) => {
             particle.responseToWindowSizeChange()
@@ -226,9 +227,14 @@ class Effect {
         this.numberOfParticles = newSize
     }
 
+    calculateMouseInteractionRadius() {
+        const size = Math.min(this.canvas.width, this.canvas.height)
+        return Math.round(size / 500 * 50)
+    }
+
     calculateNumberOfParticles() {
         const size = Math.min(this.canvas.width, this.canvas.height)
-        return Math.round((size / 360) * 150)
+        return Math.round(size / 360 * 150)
     }
 
 }
