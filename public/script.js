@@ -74,7 +74,7 @@ class Particle {
 }
 
 class Effect {
-    constructor(canvas, context, numberOfParticles) {
+    constructor(canvas, context) {
         this.canvas = canvas
         this.context = context
 
@@ -82,13 +82,13 @@ class Effect {
         this.setStyles()
 
         this.particles = []
-        this.createParticles(numberOfParticles)
+        this.createParticles(this.calculateNumberOfParticles())
 
         this.mouse = {
             x: 0,
             y: 0,
             pressed: false,
-            radius: 100
+            radius: this.calculateMouseInteractionRadius()
         }
 
         this.listenToResizeEvent()
@@ -207,15 +207,40 @@ class Effect {
 
         this.setStyles()
 
+        const newNumberOfParticles = this.calculateNumberOfParticles()
+        this.resizeNumberOfParticles(newNumberOfParticles)
+
+        this.mouse.radius = this.calculateMouseInteractionRadius()
+
         this.particles.forEach( (particle) => {
             particle.responseToWindowSizeChange()
         } )
     }
 
+    resizeNumberOfParticles(newSize) {
+        if (newSize < this.particles.length) {
+            this.particles = this.particles.slice(0, -(this.particles.length - newSize))
+
+        } else if (newSize > this.particles.length) {
+            this.createParticles(newSize - this.particles.length)
+        }
+        this.numberOfParticles = newSize
+    }
+
+    calculateMouseInteractionRadius() {
+        const size = Math.min(this.canvas.width, this.canvas.height)
+        return Math.round(size / 500 * 50)
+    }
+
+    calculateNumberOfParticles() {
+        const size = Math.min(this.canvas.width, this.canvas.height)
+        return Math.round(size / 360 * 150)
+    }
+
 }
 
 
-const effect = new Effect(canvas, context, 300)
+const effect = new Effect(canvas, context)
 
 function animate() {
     context.clearRect(0, 0, canvas.width, canvas.height)
