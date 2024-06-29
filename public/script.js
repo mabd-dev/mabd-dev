@@ -3,8 +3,15 @@
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+
+/**
+ * Used to multiply canvas widht and height, to get correct position on canvas after scalling
+ */
+const sizeFactor = window.devicePixelRatio
+
+canvas.width = canvas.offsetWidth * sizeFactor
+canvas.height = canvas.offsetHeight * sizeFactor
+
 
 class Particle {
     constructor(effect) {
@@ -107,28 +114,31 @@ class Effect {
 
     listenToResizeEvent() {
         window.addEventListener('resize', e => {
-            this.handleWindowResize(e.target.window.innerWidth, e.target.window.innerHeight)
+            this.handleWindowResize(
+                e.target.window.innerWidth * sizeFactor,
+                e.target.window.innerHeight * sizeFactor
+            )
         })
     }
 
     listenToMouseEvents() {
         window.addEventListener('mousemove', e => {
             if (this.mouse.pressed) {
-                this.mouse.x = e.x
-                this.mouse.y = e.y
+                this.mouse.x = e.x * sizeFactor
+                this.mouse.y = e.y * sizeFactor
             }
             // console.log(`mouse move: id=${e.target.id} x=${e.x}, y=${e.y}`)
         })
         window.addEventListener('mousedown', e => {
             this.mouse.pressed = true
-            this.mouse.x = e.x
-            this.mouse.y = e.y
+            this.mouse.x = e.x * sizeFactor
+            this.mouse.y = e.y * sizeFactor
             // console.log(`mouse down: x=${e.x}, y=${e.y}`)
         })
         window.addEventListener('mouseup', e => {
             this.mouse.pressed = false
-            this.mouse.x = e.x
-            this.mouse.y = e.y
+            this.mouse.x = e.x * sizeFactor
+            this.mouse.y = e.y * sizeFactor
             // console.log(`mouse up: x=${e.x}, y=${e.y}`)
         })
     }
@@ -137,21 +147,21 @@ class Effect {
         this.canvas.addEventListener('touchstart', (event) => {
             if (event.touches.length > 0) {
                 this.mouse.pressed = true
-                this.mouse.x = event.touches[0].clientX
-                this.mouse.y = event.touches[0].clientY
+                this.mouse.x = event.touches[0].clientX * sizeFactor
+                this.mouse.y = event.touches[0].clientY * sizeFactor
             }
         })
         this.canvas.addEventListener('touchend', (event) => {
             this.mouse.pressed = false
             if (event.touches.length > 0) {
-                this.mouse.x = event.touches[0].clientX
-                this.mouse.y = event.touches[0].clientY
+                this.mouse.x = event.touches[0].clientX * sizeFactor
+                this.mouse.y = event.touches[0].clientY * sizeFactor
             }
         })
         this.canvas.addEventListener('touchmove', (event) => {
             if (event.touches.length > 0 && this.mouse.pressed) {
-                this.mouse.x = event.touches[0].clientX
-                this.mouse.y = event.touches[0].clientY
+                this.mouse.x = event.touches[0].clientX * sizeFactor
+                this.mouse.y = event.touches[0].clientY * sizeFactor
             }
         })
     }
@@ -234,7 +244,7 @@ class Effect {
 
     calculateNumberOfParticles() {
         const size = Math.min(this.canvas.width, this.canvas.height)
-        return Math.round(size / 360 * 150)
+        return Math.round(size / 360 * 100)
     }
 
 }
