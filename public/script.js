@@ -244,7 +244,7 @@ class Effect {
 
     calculateNumberOfParticles() {
         const size = Math.min(this.canvas.width, this.canvas.height)
-        return Math.round(size / 360 * 150)
+        return Math.round(size / 360 * 100)
     }
 
 }
