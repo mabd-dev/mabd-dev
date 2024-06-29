@@ -47,7 +47,7 @@ body {
     text-shadow: 2px 2px #930404;
 }
 
-.non-selectable-text {
+.non-selectable {
     user-select: none;
 }
 
