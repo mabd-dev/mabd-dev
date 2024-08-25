@@ -5,13 +5,7 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "redirects": [
-      {
-        "source": "/",
-        "destination": "https://www.mabduniverse.com",
-        "type": "301"
-      }
     ]
   }
 }
+
