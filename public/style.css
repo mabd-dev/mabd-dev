@@ -11,7 +11,7 @@ body {
 
 @font-face {
     font-family: 'Manrope';
-    src: url(../fonts/Manrope-Bold.ttf);
+    src: url(/fonts/Manrope-Bold.ttf);
 }
 
 #canvas {
