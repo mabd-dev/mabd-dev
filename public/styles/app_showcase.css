@@ -122,14 +122,22 @@ feature-list + .tech-stack {
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     object-fit: contain; /* Maintain aspect ratio */
+    background-color: #FEB52B; /* Add background color to match your theme */
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .coming-soon-section {
+        height: auto; /* Remove fixed height */
+        min-height: 100vh; /* Ensure minimum height */
+        padding: 2rem 0; /* Add some vertical padding */
+    }
+
     .app-showcase-container {
         flex-direction: column;
         gap: 2rem;
         padding: 1.5rem;
+        height: auto;
     }
 
     .app-header {
@@ -153,13 +161,40 @@ feature-list + .tech-stack {
     }
 
     .app-screenshots {
-        height: 60vh; /* Slightly smaller on mobile */
+        height: auto;
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0 1rem; /* Add some horizontal padding */
     }
 
     .screenshot {
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        border-radius: 16px; /* Explicitly set for mobile */
+        overflow: hidden; /* Ensure content doesn't overflow rounded corners */
     }
+
+    .feature-list, .tech-stack {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .feature-list ul, .tech-stack ul {
+        padding-left: 1.5rem;
+    }
+
+    .feature-list li, .tech-stack li {
+        margin-top: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .app-screenshots {
+        height: auto; /* Remove fixed height */
+        width: 100%;
+        margin-top: 2rem;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -177,6 +212,16 @@ feature-list + .tech-stack {
     }
 
     .screenshot {
-        max-width: 100%;
+        border-radius: 16px; /* Ensure border radius on smaller devices */
+        width: 100%;
+        height: auto;
+    }
+
+    .app-description {
+        font-size: 0.95rem;
+    }
+    
+    .feature-list li, .tech-stack li {
+        font-size: 0.95rem;
     }
 }
