@@ -1,0 +1,282 @@
+.main-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.empty-app-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        180deg,
+        #000000 0%,
+        #171C26 40%,
+        #1d2330 90%,
+        #22282f 100%
+    );
+}
+
+.app-showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.app-info {
+    flex: 1;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+}
+
+.app-name {
+    font-size: 2.5rem;
+    color: #FEB52B;
+    font-family: 'Manrope';
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.empty-app-section h2 {
+    font-size: 2rem;
+    color: #feb42b;
+    font-family: 'Manrope';
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.app-description {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-family: 'Manrope';
+}
+
+.feature-list, .tech-stack {
+    display: block;
+    margin-top: 1rem;
+    color: #fff;
+    font-family: 'Manrope-Regular';
+    font-size: 0.9rem;
+}
+
+feature-list + .tech-stack {
+    margin-top: 1.5rem;
+}
+
+.feature-list ul, .tech-stack ul {
+    list-style: none;
+    padding-left: 1.2rem;
+}
+
+.feature-list li, .tech-stack li {
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.feature-list li:before, .tech-stack li:before {
+    content: "•";
+    position: absolute;
+    left: -1.2rem;
+    color: #FEB52B;
+}
+
+.feature-list strong, .tech-stack strong {
+    display: block;
+    color: #FEB52B;
+    margin-bottom: 0.5rem;
+}
+
+.playstore-button {
+    display: block;  /* Makes the link a block element */
+    margin-top: 2rem;  /* Adds space above the button */
+}
+
+.playstore-button img {
+    height: auto;
+    width: 150px;
+}
+
+.app-screenshots {
+    position: relative;
+    width: 50%;
+    height: 600px;  /* Fixed height container */
+    overflow: hidden;
+}
+
+.app-screenshots::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        #171C26 0%,
+        rgba(23, 28, 38, 0.7) 1%,
+        rgba(23, 28, 38, 0) 100%
+    );
+    z-index: 3;
+    pointer-events: none;
+}
+
+.app-screenshots::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to left, 
+        #171C26 0%,
+        rgba(23, 28, 38, 0.7) 1%,
+        rgba(23, 28, 38, 0) 100%
+    );
+    z-index: 3;
+    pointer-events: none;
+}
+
+.scroll-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;  /* Changed to row for horizontal scroll */
+    height: 100%;
+    animation: scroll 20s linear infinite;
+    gap: 24px;
+    z-index: 2; /* Place it above the fading effect */
+}
+
+.scroll-group {
+    display: flex;
+    flex-direction: row;  /* Changed to row */
+    gap: 24px;
+    height: 100%;  /* Full height of container */
+}
+
+.screenshot {
+    height: 100%;  /* Full height of container */
+    width: auto;   /* Maintain aspect ratio */
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);  /* Move left by half */
+    }
+}
+
+.scroll-container:hover {
+    animation-play-state: paused;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .empty-app-section {
+        height: auto; /* Remove fixed height */
+        min-height: 100vh; /* Ensure minimum height */
+        padding: 2rem 0; /* Add some vertical padding */
+    }
+
+    .app-showcase-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+        height: auto;
+    }
+    
+    .app-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-header {
+        justify-content: center;
+    }
+
+    .app-name {
+        font-size: 2rem;
+    }
+
+    .app-description {
+        text-align: left;
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .feature-list, .tech-stack {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .feature-list ul, .tech-stack ul {
+        padding-left: 1.5rem;
+    }
+
+    .feature-list li, .tech-stack li {
+        margin-top: 0.75rem;
+        line-height: 1.4;
+    }
+
+
+    .playstore-button {
+        margin-top: 1.5rem;  /* Slightly less margin on mobile */
+        align-self: center;  /* Centers the button when parent is flex */
+    }
+
+    .app-screenshots {
+        width: 80%;
+    }
+
+    .scroll-group {
+        gap: 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .app-showcase-container {
+        padding: 1rem;
+    }
+
+    .app-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .app-name {
+        font-size: 1.75rem;
+    }
+
+    .app-description {
+        font-size: 0.95rem;
+    }
+    
+    .feature-list li, .tech-stack li {
+        font-size: 0.85rem;
+    }
+
+    .app-screenshots {
+        height: 350px;  /* Even smaller on mobile */
+    }
+}
