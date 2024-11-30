@@ -1,0 +1,182 @@
+.main-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.coming-soon-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        180deg,
+        #000000 0%,
+        #171C26 40%,
+        #1d2330 90%,
+        #22282f 100%
+    );
+}
+
+.coming-soon-section h2 {
+    font-size: 2rem;
+    color: #feb42b;
+    font-family: 'Manrope';
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.app-showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.app-info {
+    flex: 1;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+}
+
+.app-name {
+    font-size: 2.5rem;
+    color: #FEB52B;
+    font-family: 'Manrope';
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.app-description {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-family: 'Manrope';
+}
+
+.feature-list, .tech-stack {
+    display: block;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+feature-list + .tech-stack {
+    margin-top: 1.5rem;
+}
+
+.feature-list ul, .tech-stack ul {
+    list-style: none;
+    padding-left: 1.2rem;
+}
+
+.feature-list li, .tech-stack li {
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.feature-list li:before, .tech-stack li:before {
+    content: "•";
+    position: absolute;
+    left: -1.2rem;
+    color: #FEB52B;
+}
+
+.feature-list strong, .tech-stack strong {
+    display: block;
+    color: #FEB52B;
+    margin-bottom: 0.5rem;
+}
+
+.playstore-button img {
+    height: auto;
+    width: 150px;
+}
+
+.app-screenshots {
+    flex: 0 1 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Give it a good height relative to viewport */
+}
+
+.screenshot {
+    height: 100%; /* Take full height of parent */
+    width: auto; /* Let width adjust based on aspect ratio */
+    max-width: 100%; /* Ensure it doesn't overflow container width */
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .app-showcase-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .app-header {
+        justify-content: center;
+    }
+
+    .app-name {
+        font-size: 2rem;
+    }
+
+    .app-description {
+        text-align: left;
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .app-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-screenshots {
+        height: 60vh; /* Slightly smaller on mobile */
+    }
+
+    .screenshot {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-showcase-container {
+        padding: 1rem;
+    }
+
+    .app-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .app-name {
+        font-size: 1.75rem;
+    }
+
+    .screenshot {
+        max-width: 100%;
+    }
+}
