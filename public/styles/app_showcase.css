@@ -4,7 +4,7 @@
     position: relative;
 }
 
-.coming-soon-section {
+.empty-app-section {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -18,14 +18,6 @@
         #22282f 100%
     );
 }
-
-.coming-soon-section h2 {
-    font-size: 2rem;
-    color: #feb42b;
-    font-family: 'Manrope';
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
-}
-
 
 .app-showcase-container {
     max-width: 1200px;
@@ -56,6 +48,13 @@
 .app-name {
     font-size: 2.5rem;
     color: #FEB52B;
+    font-family: 'Manrope';
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.empty-app-section h2 {
+    font-size: 2rem;
+    color: #feb42b;
     font-family: 'Manrope';
     text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -134,7 +133,7 @@ feature-list + .tech-stack {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .coming-soon-section {
+    .empty-app-section {
         height: auto; /* Remove fixed height */
         min-height: 100vh; /* Ensure minimum height */
         padding: 2rem 0; /* Add some vertical padding */
@@ -145,6 +144,12 @@ feature-list + .tech-stack {
         gap: 2rem;
         padding: 1.5rem;
         height: auto;
+    }
+    
+    .app-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .app-header {
@@ -159,27 +164,6 @@ feature-list + .tech-stack {
         text-align: left;
         font-size: 1rem;
         padding: 0 1rem;
-    }
-
-    .app-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .app-screenshots {
-        height: auto;
-        width: 100%;
-        margin-top: 2rem;
-        padding: 0 1rem; /* Add some horizontal padding */
-    }
-
-    .screenshot {
-        width: 100%;
-        height: auto;
-        max-height: 70vh;
-        border-radius: 16px; /* Explicitly set for mobile */
-        overflow: hidden; /* Ensure content doesn't overflow rounded corners */
     }
 
     .feature-list, .tech-stack {
@@ -207,6 +191,21 @@ feature-list + .tech-stack {
         align-self: center;  /* Centers the button when parent is flex */
     }
 
+    .app-screenshots {
+        height: auto;
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0 1rem; /* Add some horizontal padding */
+    }
+
+    .screenshot {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        border-radius: 16px; /* Explicitly set for mobile */
+        overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -223,17 +222,17 @@ feature-list + .tech-stack {
         font-size: 1.75rem;
     }
 
-    .screenshot {
-        border-radius: 16px; /* Ensure border radius on smaller devices */
-        width: 100%;
-        height: auto;
-    }
-
     .app-description {
         font-size: 0.95rem;
     }
     
     .feature-list li, .tech-stack li {
         font-size: 0.85rem;
+    }
+
+    .screenshot {
+        border-radius: 16px; /* Ensure border radius on smaller devices */
+        width: 100%;
+        height: auto;
     }
 }
