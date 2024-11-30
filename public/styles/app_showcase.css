@@ -62,8 +62,8 @@
 
 .app-description {
     color: #fff;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 2rem;
     font-family: 'Manrope';
 }
@@ -72,6 +72,8 @@
     display: block;
     margin-top: 1rem;
     color: #fff;
+    font-family: 'Manrope-Regular';
+    font-size: 0.9rem;
 }
 
 feature-list + .tech-stack {
@@ -100,6 +102,11 @@ feature-list + .tech-stack {
     display: block;
     color: #FEB52B;
     margin-bottom: 0.5rem;
+}
+
+.playstore-button {
+    display: block;  /* Makes the link a block element */
+    margin-top: 2rem;  /* Adds space above the button */
 }
 
 .playstore-button img {
@@ -192,7 +199,12 @@ feature-list + .tech-stack {
     .app-screenshots {
         height: auto; /* Remove fixed height */
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .playstore-button {
+        margin-top: 1.5rem;  /* Slightly less margin on mobile */
+        align-self: center;  /* Centers the button when parent is flex */
     }
 
 }
@@ -222,6 +234,6 @@ feature-list + .tech-stack {
     }
     
     .feature-list li, .tech-stack li {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 }
