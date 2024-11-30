@@ -114,22 +114,80 @@ feature-list + .tech-stack {
 }
 
 .app-screenshots {
-    flex: 0 1 60%;
+    position: relative;
+    width: 50%;
+    height: 600px;  /* Fixed height container */
+    overflow: hidden;
+}
+
+.app-screenshots::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        #171C26 0%,
+        rgba(23, 28, 38, 0.7) 1%,
+        rgba(23, 28, 38, 0) 100%
+    );
+    z-index: 3;
+    pointer-events: none;
+}
+
+.app-screenshots::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to left, 
+        #171C26 0%,
+        rgba(23, 28, 38, 0.7) 1%,
+        rgba(23, 28, 38, 0) 100%
+    );
+    z-index: 3;
+    pointer-events: none;
+}
+
+.scroll-container {
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh; /* Give it a good height relative to viewport */
+    flex-direction: row;  /* Changed to row for horizontal scroll */
+    height: 100%;
+    animation: scroll 20s linear infinite;
+    gap: 24px;
+    z-index: 2; /* Place it above the fading effect */
+}
+
+.scroll-group {
+    display: flex;
+    flex-direction: row;  /* Changed to row */
+    gap: 24px;
+    height: 100%;  /* Full height of container */
 }
 
 .screenshot {
-    height: 100%; /* Take full height of parent */
-    width: auto; /* Let width adjust based on aspect ratio */
-    max-width: 100%; /* Ensure it doesn't overflow container width */
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    object-fit: contain; /* Maintain aspect ratio */
-    background-color: #FEB52B; /* Add background color to match your theme */
+    height: 100%;  /* Full height of container */
+    width: auto;   /* Maintain aspect ratio */
+    object-fit: contain;
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);  /* Move left by half */
+    }
+}
+
+.scroll-container:hover {
+    animation-play-state: paused;
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -180,11 +238,6 @@ feature-list + .tech-stack {
         line-height: 1.4;
     }
 
-    .app-screenshots {
-        height: auto; /* Remove fixed height */
-        width: 100%;
-        margin-top: 1.5rem;
-    }
 
     .playstore-button {
         margin-top: 1.5rem;  /* Slightly less margin on mobile */
@@ -192,18 +245,11 @@ feature-list + .tech-stack {
     }
 
     .app-screenshots {
-        height: auto;
-        width: 100%;
-        margin-top: 2rem;
-        padding: 0 1rem; /* Add some horizontal padding */
+        width: 80%;
     }
 
-    .screenshot {
-        width: 100%;
-        height: auto;
-        max-height: 70vh;
-        border-radius: 16px; /* Explicitly set for mobile */
-        overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+    .scroll-group {
+        gap: 16px;
     }
 
 }
@@ -230,9 +276,7 @@ feature-list + .tech-stack {
         font-size: 0.85rem;
     }
 
-    .screenshot {
-        border-radius: 16px; /* Ensure border radius on smaller devices */
-        width: 100%;
-        height: auto;
+    .app-screenshots {
+        height: 350px;  /* Even smaller on mobile */
     }
 }
