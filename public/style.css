@@ -83,6 +83,14 @@ body {
     border-radius: 30px 30px;
 }
 
+.social-media-icons-fit-container img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-media-icons-fit-container img:hover {
+    transform: scale(1.5);
+}
+
 /** Desktop */
 @media (min-width: 768px) {
     img {

@@ -94,7 +94,7 @@ class Effect {
         this.mouse = {
             x: 0,
             y: 0,
-            pressed: false,
+            pressed: true, // Not handling mouse down/up anymore
             radius: this.calculateMouseInteractionRadius()
         }
 
@@ -123,24 +123,26 @@ class Effect {
 
     listenToMouseEvents() {
         window.addEventListener('mousemove', e => {
-            if (this.mouse.pressed) {
+            // if (this.mouse.pressed) {
                 this.mouse.x = e.x * sizeFactor
                 this.mouse.y = e.y * sizeFactor
-            }
-            // console.log(`mouse move: id=${e.target.id} x=${e.x}, y=${e.y}`)
+            // }
         })
-        window.addEventListener('mousedown', e => {
-            this.mouse.pressed = true
-            this.mouse.x = e.x * sizeFactor
-            this.mouse.y = e.y * sizeFactor
-            // console.log(`mouse down: x=${e.x}, y=${e.y}`)
-        })
-        window.addEventListener('mouseup', e => {
-            this.mouse.pressed = false
-            this.mouse.x = e.x * sizeFactor
-            this.mouse.y = e.y * sizeFactor
-            // console.log(`mouse up: x=${e.x}, y=${e.y}`)
-        })
+
+        // Feature is disabled for now
+
+        // window.addEventListener('mousedown', e => {
+        //     this.mouse.pressed = true
+        //     this.mouse.x = e.x * sizeFactor
+        //     this.mouse.y = e.y * sizeFactor
+        //     // console.log(`mouse down: x=${e.x}, y=${e.y}`)
+        // })
+        // window.addEventListener('mouseup', e => {
+        //     this.mouse.pressed = false
+        //     this.mouse.x = e.x * sizeFactor
+        //     this.mouse.y = e.y * sizeFactor
+        //     // console.log(`mouse up: x=${e.x}, y=${e.y}`)
+        // })
     }
 
     listenToTouchEvents() {
