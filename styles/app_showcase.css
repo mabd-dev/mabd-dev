@@ -247,9 +247,9 @@ feature-list + .tech-stack {
     }
 }
 
-.scroll-container:hover {
+/* .scroll-container:hover {
     animation-play-state: paused;
-}
+} */
 
 
 /* Mobile Responsiveness */
