@@ -11,10 +11,10 @@
 
 .empty-app-section, .habitsss-app-section {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0rem 1rem 0rem;
 }
 .empty-app-section {
     background: linear-gradient(
@@ -247,9 +247,9 @@ feature-list + .tech-stack {
     }
 }
 
-.scroll-container:hover {
+/* .scroll-container:hover {
     animation-play-state: paused;
-}
+} */
 
 
 /* Mobile Responsiveness */
