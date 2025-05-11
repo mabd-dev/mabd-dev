@@ -130,3 +130,38 @@ body {
     } 
 }
 
+
+.play-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #12140E;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px;
+  }
+
+.play-button:hover {
+transform: scale(1.03);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.play-icon {
+font-size: 24px;
+margin-right: 10px;
+color: #B1D18A; /* Play triangle color */
+}
+
+.play-text .small-text {
+font-size: 10px;
+display: block;
+opacity: 0.8;
+}
+
+.play-text .large-text {
+font-size: 14px;
+font-weight: bold;
+}
