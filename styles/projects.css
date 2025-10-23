@@ -24,17 +24,20 @@
 }
 
 .projects-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: #FEB52B;
-    font-family: 'Manrope';
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
 
 .projects-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #B1D18A;
-    font-family: 'Manrope-Regular';
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     opacity: 0.9;
 }
 
@@ -48,13 +51,14 @@
 }
 
 .filter-btn {
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem 1.75rem;
     background-color: rgba(254, 181, 43, 0.1);
     color: #FEB52B;
     border: 2px solid #FEB52B;
     border-radius: 25px;
-    font-family: 'Manrope-Regular';
-    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     outline: none;
@@ -69,7 +73,7 @@
 .filter-btn.active {
     background-color: #FEB52B;
     color: #12140E;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* Projects Grid */
@@ -141,47 +145,51 @@
 }
 
 .project-name {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     color: #FEB52B;
-    font-family: 'Manrope';
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     margin: 0;
 }
 
 .project-category {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     background-color: rgba(177, 209, 138, 0.15);
     color: #B1D18A;
     border: 1px solid #B1D18A;
     border-radius: 12px;
-    font-size: 0.75rem;
-    font-family: 'Manrope-Regular';
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     white-space: nowrap;
 }
 
 .project-description {
     color: #e0e0e0;
-    font-family: 'Manrope-Regular';
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
     flex-grow: 1;
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
 }
 
 .project-tag {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     background-color: rgba(254, 181, 43, 0.1);
     color: #FEB52B;
     border: 1px solid rgba(254, 181, 43, 0.3);
     border-radius: 12px;
-    font-size: 0.75rem;
-    font-family: 'Manrope-Regular';
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     white-space: nowrap;
 }
 
@@ -190,8 +198,9 @@
     align-items: center;
     gap: 0.5rem;
     color: #B1D18A;
-    font-family: 'Manrope-Regular';
-    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
 }
@@ -218,9 +227,10 @@
 }
 
 .empty-state p {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: #B1D18A;
-    font-family: 'Manrope-Regular';
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 
 /* Mobile Responsiveness */
