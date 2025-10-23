@@ -6,6 +6,7 @@ const labels = {
     'cli': 'CLI Tool',
     'api': 'API',
     'library': 'Library',
+    'creative-coding': 'Creative Coding',
     'other': 'Other'
 };
 
@@ -17,14 +18,6 @@ const projects = [
         tags: ["Android", "Kotlin", "Jetpack Compose"],
         image: "resources/images/habitsss/app_icon.png",
         link: "https://habitsss.app"
-    },
-    {
-        name: "Empty",
-        category: "mobile-app",
-        description: "A physics-based puzzle game that transforms your phone into a motion-controlled playground with challenging mazes.",
-        tags: ["Android", "Kotlin", "Game"],
-        image: "resources/images/empty/app_icon.png",
-        link: "projects/empty/index.html"
     },
     {
         name: "RepoScan",
@@ -41,6 +34,22 @@ const projects = [
         tags: ["Go", "CLI", "Terminal"],
         image: "resources/projects/prayer-times.png",
         link: "projects/prayer-times/index.html"
+    },
+    {
+        name: "Empty",
+        category: "mobile-app",
+        description: "A physics-based puzzle game that transforms your phone into a motion-controlled playground with challenging mazes.",
+        tags: ["Android", "Kotlin", "Game"],
+        image: "resources/images/empty/app_icon.png",
+        link: "projects/empty/index.html"
+    },
+    {
+        name: "Creative Coding",
+        category: "creative-coding",
+        description: "Interactive canvas experiments exploring generative art, particle systems, and visual effects through code.",
+        tags: ["JavaScript", "Canvas", "Generative Art"],
+        image: null,
+        link: "projects/creative-coding/index.html"
     }
 ];
 

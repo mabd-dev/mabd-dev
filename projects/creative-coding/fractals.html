@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractal Tree | Creative Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            backdrop-blur-sm;
+        }
+
+        .back-link {
+            color: #8B5CF6;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #8B5CF6;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #A78BFA;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            max-width: 280px;
+        }
+
+        .control-group {
+            margin-bottom: 0.8rem;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            margin-bottom: 0.3rem;
+        }
+
+        .control-group input[type="range"] {
+            width: 100%;
+            accent-color: #8B5CF6;
+        }
+
+        .control-group span {
+            font-size: 0.85rem;
+            color: #A78BFA;
+        }
+
+        .button {
+            background: #8B5CF6;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #7C3AED;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                padding: 1rem;
+            }
+
+            .description {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="controls">
+        <a href="index.html" class="back-link">← Back to Experiments</a>
+        <h1 class="title">Fractal Tree</h1>
+        <p class="description">Recursive branching patterns creating organic tree-like structures.</p>
+
+        <div class="control-group">
+            <label for="depth">Recursion Depth: <span id="depthValue">10</span></label>
+            <input type="range" id="depth" min="5" max="15" value="10">
+        </div>
+
+        <div class="control-group">
+            <label for="angle">Branch Angle: <span id="angleValue">25</span>°</label>
+            <input type="range" id="angle" min="10" max="45" value="25">
+        </div>
+
+        <div class="control-group">
+            <label for="length">Initial Length: <span id="lengthValue">100</span></label>
+            <input type="range" id="length" min="50" max="200" value="100">
+        </div>
+
+        <button class="button" onclick="drawTree()">Regenerate Tree</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        let maxDepth = 10;
+        let branchAngle = 25;
+        let initialLength = 100;
+
+        function drawBranch(startX, startY, length, angle, depth) {
+            if (depth === 0) return;
+
+            // Calculate end point
+            const endX = startX + length * Math.cos(angle * Math.PI / 180);
+            const endY = startY + length * Math.sin(angle * Math.PI / 180);
+
+            // Color gradient based on depth
+            const hue = 270; // Purple hue
+            const saturation = 60 + (depth / maxDepth) * 40;
+            const lightness = 40 + (depth / maxDepth) * 40;
+            ctx.strokeStyle = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+            // Line width based on depth
+            ctx.lineWidth = depth * 0.8;
+
+            // Draw branch
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, endY);
+            ctx.stroke();
+
+            // Recursive calls for child branches
+            const newLength = length * 0.7;
+            const randomVariation = (Math.random() - 0.5) * 10;
+
+            // Left branch
+            drawBranch(
+                endX,
+                endY,
+                newLength,
+                angle - branchAngle + randomVariation,
+                depth - 1
+            );
+
+            // Right branch
+            drawBranch(
+                endX,
+                endY,
+                newLength,
+                angle + branchAngle + randomVariation,
+                depth - 1
+            );
+
+            // Optional middle branch for more complexity
+            if (depth > 6 && Math.random() > 0.7) {
+                drawBranch(
+                    endX,
+                    endY,
+                    newLength * 0.8,
+                    angle + randomVariation,
+                    depth - 2
+                );
+            }
+        }
+
+        function drawTree() {
+            // Clear canvas
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, width, height);
+
+            // Set line cap for smoother branches
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            // Draw trunk starting from bottom center
+            const startX = width / 2;
+            const startY = height - 50;
+            const trunkAngle = -90; // Point upward
+
+            drawBranch(startX, startY, initialLength, trunkAngle, maxDepth);
+        }
+
+        // Window resize
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            drawTree();
+        });
+
+        // Controls
+        document.getElementById('depth').addEventListener('input', (e) => {
+            maxDepth = parseInt(e.target.value);
+            document.getElementById('depthValue').textContent = maxDepth;
+            drawTree();
+        });
+
+        document.getElementById('angle').addEventListener('input', (e) => {
+            branchAngle = parseInt(e.target.value);
+            document.getElementById('angleValue').textContent = branchAngle;
+            drawTree();
+        });
+
+        document.getElementById('length').addEventListener('input', (e) => {
+            initialLength = parseInt(e.target.value);
+            document.getElementById('lengthValue').textContent = initialLength;
+            drawTree();
+        });
+
+        // Initial draw
+        drawTree();
+    </script>
+</body>
+</html>
