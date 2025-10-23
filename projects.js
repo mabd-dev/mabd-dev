@@ -24,7 +24,7 @@ const projects = [
         description: "A physics-based puzzle game that transforms your phone into a motion-controlled playground with challenging mazes.",
         tags: ["Android", "Kotlin", "Game"],
         image: "resources/images/empty/app_icon.png",
-        link: "#" // Will add dedicated page later
+        link: "projects/empty/index.html"
     },
     {
         name: "RepoScan",
