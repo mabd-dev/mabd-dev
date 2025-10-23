@@ -1,0 +1,31 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#0f172a"/>
+
+  <!-- Terminal window outline -->
+  <rect x="50" y="80" width="300" height="240" rx="8" fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
+
+  <!-- Terminal header dots -->
+  <circle cx="75" cy="105" r="6" fill="#ef4444"/>
+  <circle cx="95" cy="105" r="6" fill="#eab308"/>
+  <circle cx="115" cy="105" r="6" fill="#22c55e"/>
+
+  <!-- Terminal content - Git branch icon -->
+  <path d="M 100 150 L 100 200 M 100 150 Q 100 180, 130 180 L 180 180 M 130 180 L 130 230"
+        stroke="#7c3aed" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+  <!-- Git nodes -->
+  <circle cx="100" cy="150" r="12" fill="#0ea5e9" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="180" cy="180" r="12" fill="#0ea5e9" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="130" cy="230" r="12" fill="#0ea5e9" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="100" cy="200" r="12" fill="#22c55e" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Magnifying glass -->
+  <circle cx="260" cy="210" r="35" fill="none" stroke="#0ea5e9" stroke-width="8"/>
+  <line x1="285" y1="235" x2="315" y2="265" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Small code-like lines in magnifying glass -->
+  <line x1="245" y1="200" x2="265" y2="200" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+  <line x1="245" y1="210" x2="275" y2="210" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+  <line x1="245" y1="220" x2="270" y2="220" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+</svg>

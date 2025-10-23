@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MABD Dev</title>
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta 
-        name="description"
-        content="Discover MABD Universe and all the work I do. From creating apps, youtube videos, writing articles and enjoying cinematography."
-    >
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/app_showcase.css">
+    <title>MABD - Developer, Creator & Open Source Enthusiast</title>
 
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="MABD - Developer, Creator & Open Source Enthusiast">
+    <meta name="description" content="Portfolio of MABD - Building mobile apps, CLI tools, and open-source projects. Explore Android apps like Habitsss, developer tools like RepoScan, and creative coding experiments.">
+    <meta name="keywords" content="MABD, developer portfolio, Android developer, mobile apps, CLI tools, open source, Kotlin, Go, JavaScript, Habitsss, RepoScan, creative coding">
+    <meta name="author" content="MABD">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mabd.dev/">
+    <meta property="og:title" content="MABD - Developer, Creator & Open Source Enthusiast">
+    <meta property="og:description" content="Portfolio of MABD - Building mobile apps, CLI tools, and open-source projects. Explore Android apps, developer tools, and creative coding experiments.">
+    <meta property="og:image" content="https://mabd.dev/resources/favicon/favicon-512x512.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mabd.dev/">
+    <meta property="twitter:title" content="MABD - Developer, Creator & Open Source Enthusiast">
+    <meta property="twitter:description" content="Portfolio of MABD - Building mobile apps, CLI tools, and open-source projects. Explore Android apps, developer tools, and creative coding experiments.">
+    <meta property="twitter:image" content="https://mabd.dev/resources/favicon/favicon-512x512.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mabd.dev/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/contributions.css">
+
+    <!-- Favicons -->
     <link rel="manifest" href="resources/favicon/site.webmanifest">
-
     <link rel="shortcut icon" type="image/x-icon" href="resources/favicon/favicon.ico">
-
     <link rel="apple-touch-icon" sizes="512x512" href="resources/favicon/favicon-512x512.png">
     <link rel="apple-touch-icon" sizes="192x192" href="resources/favicon/favicon-192x192.png">
     <link rel="apple-touch-icon" sizes="32x32" href="resources/favicon/favicon-32x32.png">
@@ -25,196 +52,115 @@
 </head>
 <body>
 
-    <section class="main-section">
-        <canvas id="canvas"></canvas>
-
-        <div class="caption-container">
-            <h1 class="title not-selectable">MABD</h1>
-            <!-- <h1 class="caption not-selectable">Universe</h1> -->
-        </div>
-
-        <div class="footer">
-            <div class="social-media-icons-container">
-                <div class="social-media-icons-fit-container">
-                    <a 
-                        href="https://github.com/MABD-dev" 
-                        target="_blank"
-                        class="not-selectable"
-                    >
-                        <img 
-                            class="social-media-icon"
-                            src="resources/images/github-142-svgrepo-com.svg" 
-                            alt="Github"
-                        >
-                    </a>
-                    <!-- <a 
-                        href="https://play.google.com/store/apps/dev?id=7331424057234954823"
-                        target="_blank"
-                        class="not-selectable"
-                    >
-                        <img 
-                            class="social-media-icon"
-                            src="resources/images/google-play-store-svgrepo-com.svg" 
-                            alt="Google Play"
-                        >
-                    </a> -->
-                    <a 
-                        href="https://medium.com/@mabd.dev"
-                        target="_blank"
-                        class="not-selectable"
-                    >
-                        <img 
-                            class="social-media-icon"
-                            src="resources/images/medium-svgrepo-com.svg" 
-                            alt="Medium"
-                        >
-                    </a>
-                    <!-- <a 
-                        href="https://www.youtube.com/@mabd-dev"
-                        target="_blank"
-                        class="not-selectable"
-                    >
-                        <img 
-                            class="social-media-icon"
-                            src="resources/images/youtube-svgrepo-com.svg" 
-                            alt="Youtube"
-                        >
-                    </a> -->
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="habitsss-app-section">
-        <div class="app-showcase-container">
-            <div class="app-info">
-                <div class="app-header">
-                    <img src="resources/images/habitsss/app_icon.png" alt="Habitsss app icon" class="app-icon">
-                    <h2 class="app-name"><a href="https://habitsss.app" target="_blank">Habitsss</a></h2>
-                </div>
-                <p class="app-description">
-                    Habitsss is more than just a habit tracker; it's a powerful tool designed to help you 
-                    build and maintain healthy habits. With its intuitive interface and robust features, 
-                    Habitsss makes it easy to stay on track and achieve your goals. 
-
-                    <br/>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">MABD</h1>
+                <p class="hero-subtitle">Developer · Creator · Open Source Enthusiast</p>
+                <p class="hero-description">
+                    Building mobile apps, CLI tools, and open-source projects. </br>
+                    I type on my keyboard and stuff happens.  </br>
+                    I use <b>Arch</b> and <b>VIM</b> btw
                 </p>
 
-                <div class="tech-chips">
-                    <span class="tech-chip">100% Compose</span>
-                    <span class="tech-chip">Crashlytics</span>
-                    <span class="tech-chip">RevenueCat</span>
-                    <span class="tech-chip">Mixpanel Analytics</span>
-                    <span class="tech-chip">Remote Config</span >
-                    <span class="tech-chip">Github Actions</span>
+                <div class="social-links">
+                    <a href="https://github.com/mabd-dev" target="_blank" class="social-link" aria-label="GitHub">
+                        <img src="resources/images/github-142-svgrepo-com.svg" alt="GitHub">
+                    </a>
+                    <a href="https://medium.com/@mabd.dev" target="_blank" class="social-link" aria-label="Medium">
+                        <img src="resources/images/medium-svgrepo-com.svg" alt="Medium">
+                    </a>
                 </div>
-
-                <span class="feature-list" style="margin-bottom: 20px;">
-                    <strong>Key Features:</strong>
-                    <ul>
-                        <li>Reminders</li>
-                        <li>Home Screen Widgets</li>
-                        <li>Cloud Backup & Multi-device Sync</li>
-                        <li>Charts & Stats</li>
-                        <li>Users Feedback & Feature Requests Board</li>
-                    </ul>
-                </span>
-            
-                <a 
-                    href="https://habitsss.app" 
-                    target="_blank"
-                    style="color: var(--habitsss-primary-color); padding-top: 1rem; font-size: 1.3rem;" 
-                    
-                >
-                    https://habitsss.app
-                </a>
             </div>
-            <div class="app-screenshots">
-                <div class="scroll-container">
-                    <!-- First set of images -->
-                    <div class="scroll-group">
-                        <img src="resources/images/habitsss/screenshot1.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/habitsss/screenshot2.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/habitsss/screenshot3.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/habitsss/screenshot4.png" alt="Empty app screenshot" class="screenshot">
-                    </div>
-                    <!-- Duplicate set for seamless scrolling -->
-                    <div class="scroll-group">
-                        <img src="resources/images/habitsss/screenshot1.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/habitsss/screenshot2.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/habitsss/screenshot3.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/habitsss/screenshot4.png" alt="Empty app screenshot" class="screenshot">
-                    </div>
-                </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow">↓</div>
             </div>
         </div>
     </section>
 
-    <section class="empty-app-section">
-        <div class="app-showcase-container">
-            <div class="app-info">
-                <div class="app-header">
-                    <img src="resources/images/empty/app_icon.png" alt="Empty app icon" class="app-icon">
-                    <h2 class="app-name">Empty</h2>
-                </div>
-                <p class="app-description">
-                    A physics-based puzzle game that transforms your phone into a motion-controlled playground! 
-                    Tilt your device to guide the ball through challenging mazes and clear the screen.
+    <!-- Projects Showcase Section -->
+    <section class="projects-section">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h1 class="projects-title">Projects</h1>
+                <p class="projects-subtitle">Explore my collection of apps, tools, and open-source projects</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mobile-app">Mobile Apps</button>
+                <!-- <button class="filter-btn" data-filter="web-app">Web Apps</button> -->
+                <button class="filter-btn" data-filter="cli">CLI Tools</button>
+                <!-- <button class="filter-btn" data-filter="creative-coding">Creative Coding</button> -->
+                <!-- <button class="filter-btn" data-filter="api">APIs</button> -->
+                <!-- <button class="filter-btn" data-filter="library">Libraries</button> -->
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects will be dynamically inserted here by JavaScript -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state">
+                <p>No projects found in this category.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Contributions Section -->
+    <section class="contributions-section">
+        <div class="contributions-container">
+            <div class="contributions-header">
+                <h2 class="contributions-title">Open Source Contributions</h2>
+                <p class="contributions-subtitle">Projects I've contributed to in the open source community</p>
+            </div>
+
+            <div id="contributions-list" class="contributions-list">
+                <!-- Contributions will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-brand">MABD</h3>
+                <p class="footer-tagline">Building digital experiences that matter.</p>
+                <p class="footer-email">
+                    <a href="mailto:mabd.dev@gmail.com">mabd.dev@gmail.com</a>
                 </p>
-
-                <div class="tech-chips">
-                    <span class="tech-chip">Kotlin</span>
-                    <span class="tech-chip">Jetpack Compose</span>
-                    <span class="tech-chip">Google Admob</span>
-                    <span class="tech-chip">PlayGames Auth</span>
-                    <span class="tech-chip">Firebase Firestore</span>
-                    <span class="tech-chip">Dagger Hilt</span>
-                    <span class="tech-chip">Mixpanel</span>
-                    <span class="tech-chip">Github Actions</span>
-                </div>
-
-                <span class="feature-list">
-                    <strong>Key Features:</strong>
-                    <ul>
-                        <li>Motion-controlled gameplay using device sensors</li>
-                        <li>Dynamic level system powered by Firebase</li>
-                        <li>Real-time level updates without app updates</li>
-                        <li>Global leaderboard system</li>
-                    </ul>
-                </span>
-            
-                <!-- <a 
-                    class="playstore-button" 
-                    href='https://play.google.com/store/apps/details?id=com.mabd.empty'
-                    target="_blank"
-                >
-                    <img 
-                      alt='Get it on Google Play' 
-                      src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' />
-                  </a> -->
             </div>
-            <div class="app-screenshots">
-                <div class="scroll-container">
-                    <!-- First set of images -->
-                    <div class="scroll-group">
-                        <img src="resources/images/empty/screenshot1.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/empty/screenshot2.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/empty/screenshot3.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/empty/screenshot4.png" alt="Empty app screenshot" class="screenshot">
-                    </div>
-                    <!-- Duplicate set for seamless scrolling -->
-                    <div class="scroll-group">
-                        <img src="resources/images/empty/screenshot1.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/empty/screenshot2.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/empty/screenshot3.png" alt="Empty app screenshot" class="screenshot">
-                        <img src="resources/images/empty/screenshot4.png" alt="Empty app screenshot" class="screenshot">
-                    </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">Connect</h4>
+                <div class="footer-links">
+                    <a href="https://github.com/mabd-dev" target="_blank" class="footer-link">GitHub</a>
+                    <a href="https://medium.com/@mabd.dev" target="_blank" class="footer-link">Medium</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-heading">Projects</h4>
+                <div class="footer-links">
+                    <a href="https://habitsss.app" target="_blank" class="footer-link">Habitsss</a>
+                    <a href="projects/reposcan/index.html" class="footer-link">RepoScan</a>
+                    <a href="projects/prayer-times/index.html" class="footer-link">Prayer Times CLI</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <script src="script.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MABD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/contributions.js"></script>
 </body>
 </html>

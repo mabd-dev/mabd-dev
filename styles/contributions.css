@@ -1,0 +1,188 @@
+/* Open Source Contributions Section */
+.contributions-section {
+    background: linear-gradient(135deg, #000 0%, #0a0a0a 100%);
+    padding: 5rem 2rem;
+    border-top: 1px solid rgba(254, 181, 43, 0.1);
+}
+
+.contributions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contributions-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contributions-title {
+    font-size: 4rem;
+    color: #FEB52B;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.contributions-subtitle {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.contributions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.contribution-card {
+    background: rgba(254, 181, 43, 0.03);
+    border: 1px solid rgba(254, 181, 43, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.contribution-card:hover {
+    background: rgba(254, 181, 43, 0.06);
+    border-color: rgba(254, 181, 43, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(254, 181, 43, 0.2);
+}
+
+.contribution-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+}
+
+.contribution-title-group {
+    flex: 1;
+}
+
+.contribution-title {
+    font-size: 1.8rem;
+    color: #FEB52B;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.contribution-org {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.contribution-description {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.contribution-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.tech-badge {
+    padding: 0.5rem 1rem;
+    background: rgba(254, 181, 43, 0.1);
+    border: 1px solid rgba(254, 181, 43, 0.25);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #FEB52B;
+    transition: all 0.2s ease;
+}
+
+.contribution-card:hover .tech-badge {
+    background: rgba(254, 181, 43, 0.15);
+    border-color: rgba(254, 181, 43, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .contributions-list {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .contributions-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .contributions-title {
+        font-size: 2.5rem;
+    }
+
+    .contributions-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .contributions-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contribution-card {
+        padding: 1.5rem;
+    }
+
+    .contribution-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contribution-title {
+        font-size: 1.5rem;
+    }
+
+    .contribution-org {
+        font-size: 1rem;
+    }
+
+    .contribution-description {
+        font-size: 1.05rem;
+    }
+
+    .tech-badge {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contributions-section {
+        padding: 3rem 1rem;
+    }
+
+    .contributions-title {
+        font-size: 2rem;
+    }
+
+    .contributions-subtitle {
+        font-size: 1rem;
+    }
+
+    .contribution-title {
+        font-size: 1.3rem;
+    }
+}
