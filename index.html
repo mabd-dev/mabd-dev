@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/app_showcase.css">
+    <link rel="stylesheet" href="styles/projects.css">
 
     <link rel="manifest" href="resources/favicon/site.webmanifest">
 
@@ -215,6 +216,37 @@
         </div>
     </section>
 
+    <!-- Projects Showcase Section -->
+    <section class="projects-section">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h1 class="projects-title">Projects</h1>
+                <p class="projects-subtitle">Explore my collection of apps, tools, and open-source projects</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mobile-app">Mobile Apps</button>
+                <button class="filter-btn" data-filter="web-app">Web Apps</button>
+                <button class="filter-btn" data-filter="cli">CLI Tools</button>
+                <button class="filter-btn" data-filter="api">APIs</button>
+                <button class="filter-btn" data-filter="library">Libraries</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects will be dynamically inserted here by JavaScript -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state">
+                <p>No projects found in this category.</p>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
+    <script src="projects.js"></script>
 </body>
 </html>
