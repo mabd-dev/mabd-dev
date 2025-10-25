@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole | Creative Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            cursor:pointer
+        }
+
+        .controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            backdrop-blur-sm;
+        }
+
+        .back-link {
+            color: #8B5CF6;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #8B5CF6;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #A78BFA;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            max-width: 280px;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #C4B5FD;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .control-group {
+            margin-bottom: 0.8rem;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            margin-bottom: 0.3rem;
+        }
+
+        .control-group input[type="range"] {
+            width: 100%;
+            accent-color: #8B5CF6;
+        }
+
+        .control-group span {
+            font-size: 0.85rem;
+            color: #A78BFA;
+        }
+
+        .button {
+            background: #8B5CF6;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #7C3AED;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                padding: 1rem;
+            }
+
+            .description {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="controls">
+        <a href="index.html" class="back-link">← Back to Experiments</a>
+        <h1 class="title">Black Hole</h1>
+        <p class="description">Gravitational absorption effect where particles spiral into a singularity, with interactive drawing and adjustable physics</p>
+
+        <!-- <div class="section-title">⚡ Visual Controls</div> -->
+
+        <div class="control-group">
+            <label for="numberOfParticles">Particles: <span id="numberOfParticlesValue">500</span></label>
+            <input type="range" id="numberOfParticles" min="0" max="500" value="500">
+        </div>
+
+        <div class="control-group">
+            <label for="gravitationalPull">Gravity Strength: <span id="gravitationalPullValue">1.0</span> x</label>
+            <input type="range" id="gravitationalPull" min="0.1" max="3" step="0.1" value="1.0">
+        </div>
+
+        <!-- <div class="control-group">
+            <label for="param2">Parameter 2: <span id="param2Value">100</span></label>
+            <input type="range" id="param2" min="50" max="200" value="100">
+        </div> -->
+
+        <!-- Optional button -->
+        <!-- <button class="button" onclick="resetCanvas()">Reset</button> -->
+    </div>
+
+    <script>
+        // Canvas setup
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        // constants
+        const GRAVITATIONAL_PULL = 0.01;
+        const RESPAWN_ALPHA_THRESHOLD = 0.1
+        const USER_PARTICLE_FILL_COLOR = "#7af65c" //"#5c7af6"
+
+        // Parameters
+        let numberOfParticles = 500;
+        let gravitationalPullMultiplier = 1;
+
+        // Animation variables
+        let animationId;
+        let longestDistanceFromCenter = 0
+
+        let mouseDown = false;
+        let particles = [];
+        let userParticles = [];
+
+        class Particle {
+            constructor({radius = 10, fillColor = ""} = {}) {
+                this.radius = radius
+                this.fillColor = fillColor
+
+                this.x = this.radius + Math.random() * (width - this.radius * 2)  
+                this.y = this.radius + Math.random() * (height - this.radius * 2)
+
+                this.centerX = width / 2
+                this.centerY = height / 2
+
+                this.alpha = 1
+
+                this.distanceFromCenter = 0
+                this.normalizedDistanceFromCenter = 0
+
+                this.moveToRandomPosition()
+            }
+
+            draw(context) {
+                this.distanceFromCenter = Math.hypot(this.x - width / 2, this.y - height / 2) 
+                this.normalizedDistanceFromCenter = this.distanceFromCenter / longestDistanceFromCenter
+
+                this.radius = (1 - Math.pow(this.normalizedDistanceFromCenter - 1, 2)) * 4
+                this.alpha = 1 - Math.pow(this.normalizedDistanceFromCenter - 1, 2)
+
+                context.beginPath()
+                if (this.fillColor === '') {
+                    context.fillStyle = `rgb(${155 * this.alpha}, ${92 * this.alpha}, ${246 * this.alpha})` 
+                } else {
+                    context.fillStyle = this.fillColor
+                }
+                context.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+                context.fill()
+            }
+
+            update() {
+                const dx = this.centerX - this.x
+                const dy = this.centerY - this.y
+
+                this.x += dx * GRAVITATIONAL_PULL * gravitationalPullMultiplier
+                this.y += dy * GRAVITATIONAL_PULL * gravitationalPullMultiplier
+
+                if (!this.isVisible()) {
+                    this.moveToRandomPosition()
+                }
+            }
+
+            isVisible() {
+                return this.alpha >= RESPAWN_ALPHA_THRESHOLD
+            }
+
+            moveToRandomPosition() {
+                this.x = this.radius + Math.random() * (width - this.radius * 2) //+ this.effect.width() * 0.25
+                this.y = this.radius + Math.random() * (height - this.radius * 2) //+ this.effect.height() * 0.25
+            }
+
+            isOutsideRightBound() { return this.x > width - this.radius }
+            isOutsideBottomBound() { return this.y >= height - this.radius }
+
+            responseToWindowSizeChange() {
+                if (this.isOutsideRightBound()) this.x = width - this.radius
+                if (this.isOutsideBottomBound()) this.y = height - this.radius
+
+                this.centerX = width / 2
+                this.centerY = height / 2
+            }
+        }
+
+        // Main drawing/animation function
+        function draw() {
+            particles.forEach( (particle, index) => {
+                particle.update()
+                particle.draw(ctx)
+            } )
+
+
+            let newUserParticles = []
+            userParticles.forEach( (particle, index) => {
+                particle.update()
+                particle.draw(ctx)
+
+                if (particle.isVisible()) {
+                    newUserParticles.push(particle)
+                }
+            })
+            userParticles = newUserParticles
+            drawCenterCircle()
+        }
+
+        function drawCenterCircle() { 
+            let d = longestDistanceFromCenter * (1-Math.sqrt(1-RESPAWN_ALPHA_THRESHOLD)) // radical(9) ~= 0.948683
+            ctx.beginPath()
+            ctx.strokeStyle = 'rgba(155, 92, 246, 0.02)'
+            ctx.arc(width/2, height/2, d, 0, Math.PI * 2)
+            ctx.stroke()
+        }
+
+        function animate() {
+            resetCanvas();
+            draw();
+            animationId = requestAnimationFrame(animate);
+        }
+
+        function calculateLongestDistanceFromCenter() {
+            longestDistanceFromCenter = Math.hypot(
+                0 - width / 2,
+                0 - height / 2
+            )
+        }
+        
+        function createParticles(numberOfParticles) {
+            particles = []
+            for (var i = 0; i < numberOfParticles; i++) {
+                const particle = new Particle({})
+                particles.push(particle)
+                particle.draw(ctx)
+            }
+        }
+
+        function createUserParticle(x, y) {
+            let particle = new Particle({fillColor: USER_PARTICLE_FILL_COLOR})
+            particle.x = x
+            particle.y = y
+            userParticles.push(particle)
+            particle.draw(ctx)
+        }
+
+        canvas.addEventListener('mousedown', (e) => {
+            mouseDown = true
+        });
+        canvas.addEventListener('mouseup', (e) => {
+            mouseDown = false
+            createUserParticle(e.x, e.y)
+        });
+        canvas.addEventListener('mousemove', (e) => {
+            if (mouseDown) {
+                createUserParticle(e.x, e.y)
+            }
+        });
+        
+
+        // Window resize handler
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            calculateLongestDistanceFromCenter()
+            particles.forEach(p => p.responseToWindowSizeChange());
+            userParticles.forEach(p => p.responseToWindowSizeChange());
+        });
+
+        // Control handlers
+        document.getElementById('numberOfParticles').addEventListener('input', (e) => {
+            numberOfParticles = parseInt(e.target.value);
+            document.getElementById('numberOfParticlesValue').textContent = numberOfParticles;
+
+            calculateLongestDistanceFromCenter()
+
+            if (numberOfParticles > particles.length) {
+                for (let i = particles.length; i < numberOfParticles; i++) {
+                    particles.push(new Particle());
+                }
+            } else {
+                particles.length = numberOfParticles; // Trim array
+            }
+        });
+
+        document.getElementById('gravitationalPull').addEventListener('input', (e) => {
+            console.log(e.target.value)
+            gravitationalPullMultiplier = parseFloat(e.target.value);
+            document.getElementById('gravitationalPullValue').textContent = gravitationalPullMultiplier.toFixed(1);
+        });
+
+
+        function resetCanvas() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'
+            ctx.fillRect(0, 0, width, height);
+        }
+
+
+        ctx.lineWidth = 0.9;
+        
+        calculateLongestDistanceFromCenter()
+        resetCanvas()
+        createParticles(numberOfParticles)
+
+        animate();
+    </script>
+</body>
+</html>
