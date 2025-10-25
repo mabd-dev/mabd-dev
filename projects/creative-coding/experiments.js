@@ -26,6 +26,15 @@ const experiments = [
         tags: ["Recursion", "Fractals", "Generative"],
         page: "fractals.html",
         screenshot: null
+    },
+    {
+        id: "black_hole",
+        title: "Black Hole",
+        description: "",
+        icon: "🔷",
+        tags: ["Generative"],
+        page: "black-hole.html",
+        screenshot: null
     }
 ];
 
