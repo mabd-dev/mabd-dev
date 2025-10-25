@@ -36,6 +36,14 @@ const projects = [
         link: "projects/prayer-times/index.html"
     },
     {
+        name: "Creative Coding",
+        category: "creative-coding",
+        description: "Interactive canvas experiments exploring generative art, particle systems, and visual effects through code.",
+        tags: ["JavaScript", "Canvas", "Generative Art"],
+        image: null,
+        link: "projects/creative-coding/index.html"
+    },
+    {
         name: "Empty",
         category: "mobile-app",
         description: "A physics-based puzzle game that transforms your phone into a motion-controlled playground with challenging mazes.",
@@ -43,14 +51,6 @@ const projects = [
         image: "resources/images/empty/app_icon.png",
         link: "projects/empty/index.html"
     },
-    {
-        name: "Creative Coding",
-        category: "creative-coding",
-        description: "Interactive canvas experiments exploring generative art, particle systems, and visual effects through code.",
-        tags: ["JavaScript", "Canvas", "Generative Art"],
-        image: null,
-        link: "projects/creative-coding/index.html"
-    }
 ];
 
 // Filter functionality
