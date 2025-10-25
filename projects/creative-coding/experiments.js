@@ -1,39 +1,48 @@
 // Experiments data
 const experiments = [
-    {
-        id: "particles",
-        title: "Particle System",
-        description: "Interactive particles that respond to mouse movement with physics-based motion and connections",
-        icon: "✨",
-        tags: ["Physics", "Interactive", "Particles"],
-        page: "particles.html",
-        screenshot: null // Add screenshot path later if needed
-    },
-    {
-        id: "waves",
-        title: "Wave Patterns",
-        description: "Mesmerizing sine wave animations creating fluid, organic patterns and movements",
-        icon: "🌊",
-        tags: ["Sine Waves", "Animation", "Fluid"],
-        page: "waves.html",
-        screenshot: null
-    },
-    {
-        id: "fractals",
-        title: "Fractal Tree",
-        description: "Recursive branching patterns creating organic tree-like structures with adjustable parameters",
-        icon: "🔷",
-        tags: ["Recursion", "Fractals", "Generative"],
-        page: "fractals.html",
-        screenshot: null
-    },
+    // {
+    //     id: "particles",
+    //     title: "Particle System",
+    //     description: "Interactive particles that respond to mouse movement with physics-based motion and connections",
+    //     icon: "✨",
+    //     tags: ["Physics", "Interactive", "Particles"],
+    //     page: "particles.html",
+    //     screenshot: null // Add screenshot path later if needed
+    // },
+    // {
+    //     id: "waves",
+    //     title: "Wave Patterns",
+    //     description: "Mesmerizing sine wave animations creating fluid, organic patterns and movements",
+    //     icon: "🌊",
+    //     tags: ["Sine Waves", "Animation", "Fluid"],
+    //     page: "waves.html",
+    //     screenshot: null
+    // },
+    // {
+    //     id: "fractals",
+    //     title: "Fractal Tree",
+    //     description: "Recursive branching patterns creating organic tree-like structures with adjustable parameters",
+    //     icon: "🔷",
+    //     tags: ["Recursion", "Fractals", "Generative"],
+    //     page: "fractals.html",
+    //     screenshot: null
+    // },
     {
         id: "black_hole",
-        title: "Black Hole",
+        title: "Black Hole - Simple",
         description: "Gravitational absorption effect where particles spiral into a singularity, with interactive drawing and adjustable physics",
         icon: "🕳️",
         tags: ["Physics", "Interactive", "Simulation"],
         page: "black-hole.html",
+        screenshot: null
+    },
+    {
+        id: "black_hole",
+        title: "Black Hole 2 (coming soon)",
+        description: "",
+        icon: "🕳️",
+        tags: ["Physics", "Interactive", "Simulation"],
+        page: "",
         screenshot: null
     }
 ];
@@ -55,7 +64,9 @@ function renderExperiments() {
 // Create experiment card
 function createExperimentCard(experiment) {
     const card = document.createElement('a');
-    card.href = experiment.page;
+    if (experiment.page !== "") {
+        card.href = experiment.page;
+    }
     card.className = 'experiment-card';
 
     card.innerHTML = `
