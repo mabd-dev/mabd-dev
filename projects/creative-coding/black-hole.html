@@ -23,6 +23,7 @@
 
         canvas {
             display: block;
+            cursor:pointer
         }
 
         .controls {
@@ -148,8 +149,8 @@
         <!-- <div class="section-title">⚡ Visual Controls</div> -->
 
         <div class="control-group">
-            <label for="numberOfParticles">Particles: <span id="numberOfParticlesValue">200</span></label>
-            <input type="range" id="numberOfParticles" min="10" max="500" value="200">
+            <label for="numberOfParticles">Particles: <span id="numberOfParticlesValue">500</span></label>
+            <input type="range" id="numberOfParticles" min="0" max="500" value="500">
         </div>
 
         <div class="control-group">
@@ -177,20 +178,24 @@
         // constants
         const GRAVITATIONAL_PULL = 0.01;
         const RESPAWN_ALPHA_THRESHOLD = 0.1
+        const USER_PARTICLE_FILL_COLOR = "#7af65c" //"#5c7af6"
 
         // Parameters
-        let numberOfParticles = 200;
+        let numberOfParticles = 500;
         let gravitationalPullMultiplier = 1;
 
         // Animation variables
         let animationId;
         let longestDistanceFromCenter = 0
 
-        let particles = []
+        let mouseDown = false;
+        let particles = [];
+        let userParticles = [];
 
         class Particle {
-            constructor(radius = 10) {
+            constructor({radius = 10, fillColor = ""} = {}) {
                 this.radius = radius
+                this.fillColor = fillColor
 
                 this.x = this.radius + Math.random() * (width - this.radius * 2)  
                 this.y = this.radius + Math.random() * (height - this.radius * 2)
@@ -214,7 +219,11 @@
                 this.alpha = 1 - Math.pow(this.normalizedDistanceFromCenter - 1, 2)
 
                 context.beginPath()
-                context.fillStyle = `rgb(${155 * this.alpha}, ${92 * this.alpha}, ${246 * this.alpha})` 
+                if (this.fillColor === '') {
+                    context.fillStyle = `rgb(${155 * this.alpha}, ${92 * this.alpha}, ${246 * this.alpha})` 
+                } else {
+                    context.fillStyle = this.fillColor
+                }
                 context.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
                 context.fill()
             }
@@ -226,9 +235,13 @@
                 this.x += dx * GRAVITATIONAL_PULL * gravitationalPullMultiplier
                 this.y += dy * GRAVITATIONAL_PULL * gravitationalPullMultiplier
 
-                if (this.alpha < RESPAWN_ALPHA_THRESHOLD) {
+                if (!this.isVisible()) {
                     this.moveToRandomPosition()
                 }
+            }
+
+            isVisible() {
+                return this.alpha >= RESPAWN_ALPHA_THRESHOLD
             }
 
             moveToRandomPosition() {
@@ -254,11 +267,23 @@
                 particle.update()
                 particle.draw(ctx)
             } )
+
+
+            let newUserParticles = []
+            userParticles.forEach( (particle, index) => {
+                particle.update()
+                particle.draw(ctx)
+
+                if (particle.isVisible()) {
+                    newUserParticles.push(particle)
+                }
+            })
+            userParticles = newUserParticles
             drawCenterCircle()
         }
 
-        function drawCenterCircle() {
-            let d = longestDistanceFromCenter * (1 - 0.948683) // radical(9) ~= 0.948683
+        function drawCenterCircle() { 
+            let d = longestDistanceFromCenter * (1-Math.sqrt(1-RESPAWN_ALPHA_THRESHOLD)) // radical(9) ~= 0.948683
             ctx.beginPath()
             ctx.strokeStyle = 'rgba(155, 92, 246, 0.02)'
             ctx.arc(width/2, height/2, d, 0, Math.PI * 2)
@@ -281,11 +306,33 @@
         function createParticles(numberOfParticles) {
             particles = []
             for (var i = 0; i < numberOfParticles; i++) {
-                const particle = new Particle()
+                const particle = new Particle({})
                 particles.push(particle)
                 particle.draw(ctx)
             }
         }
+
+        function createUserParticle(x, y) {
+            let particle = new Particle({fillColor: USER_PARTICLE_FILL_COLOR})
+            particle.x = x
+            particle.y = y
+            userParticles.push(particle)
+            particle.draw(ctx)
+        }
+
+        canvas.addEventListener('mousedown', (e) => {
+            mouseDown = true
+        });
+        canvas.addEventListener('mouseup', (e) => {
+            mouseDown = false
+            createUserParticle(e.x, e.y)
+        });
+        canvas.addEventListener('mousemove', (e) => {
+            if (mouseDown) {
+                createUserParticle(e.x, e.y)
+            }
+        });
+        
 
         // Window resize handler
         window.addEventListener('resize', () => {
@@ -293,6 +340,7 @@
             height = canvas.height = window.innerHeight;
             calculateLongestDistanceFromCenter()
             particles.forEach(p => p.responseToWindowSizeChange());
+            userParticles.forEach(p => p.responseToWindowSizeChange());
         });
 
         // Control handlers
