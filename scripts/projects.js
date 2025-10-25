@@ -43,14 +43,14 @@ const projects = [
         image: "resources/images/empty/app_icon.png",
         link: "projects/empty/index.html"
     },
-    // {
-    //     name: "Creative Coding",
-    //     category: "creative-coding",
-    //     description: "Interactive canvas experiments exploring generative art, particle systems, and visual effects through code.",
-    //     tags: ["JavaScript", "Canvas", "Generative Art"],
-    //     image: null,
-    //     link: "projects/creative-coding/index.html"
-    // }
+    {
+        name: "Creative Coding",
+        category: "creative-coding",
+        description: "Interactive canvas experiments exploring generative art, particle systems, and visual effects through code.",
+        tags: ["JavaScript", "Canvas", "Generative Art"],
+        image: null,
+        link: "projects/creative-coding/index.html"
+    }
 ];
 
 // Filter functionality
