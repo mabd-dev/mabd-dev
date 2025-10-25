@@ -30,9 +30,9 @@ const experiments = [
     {
         id: "black_hole",
         title: "Black Hole",
-        description: "",
-        icon: "🔷",
-        tags: ["Generative"],
+        description: "Gravitational absorption effect where particles spiral into a singularity, with interactive drawing and adjustable physics",
+        icon: "🕳️",
+        tags: ["Physics", "Interactive", "Simulation"],
         page: "black-hole.html",
         screenshot: null
     }
