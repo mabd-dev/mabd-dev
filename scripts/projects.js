@@ -28,6 +28,14 @@ const projects = [
         link: "projects/reposcan/index.html"
     },
     {
+        name: "KMeta",
+        category: "library",
+        description: "Kotlin Metaprogramming & Code Generation Toolkit using KSP for automatic code generation with annotations like @Loggable, @Copy, and @ToNiceString.",
+        tags: ["Kotlin", "KSP", "Metaprogramming"],
+        image: "resources/projects/kmeta-logo.svg",
+        link: "https://github.com/mabd-dev/kmeta"
+    },
+    {
         name: "Prayer Times CLI",
         category: "cli",
         description: "A simple terminal tool to check today's Islamic prayer times with a clean, minimal, and colorful format.",
