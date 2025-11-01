@@ -16,7 +16,7 @@ const projects = [
         category: "mobile-app",
         description: "A powerful habit tracking app with cloud sync, widgets, and analytics. Built with 100% Jetpack Compose.",
         tags: ["Android", "Kotlin", "Jetpack Compose"],
-        image: "resources/images/habitsss/app_icon.png",
+        image: "resources/projects/habitsss-icon.svg",
         link: "https://habitsss.app"
     },
     {
@@ -28,11 +28,19 @@ const projects = [
         link: "projects/reposcan/index.html"
     },
     {
+        name: "KMeta",
+        category: "library",
+        description: "Kotlin Metaprogramming & Code Generation Toolkit using KSP for automatic code generation with annotations like @Loggable, @Copy, and @ToNiceString.",
+        tags: ["Kotlin", "KSP", "Metaprogramming"],
+        image: "resources/projects/kmeta-icon.svg",
+        link: "https://github.com/mabd-dev/kmeta"
+    },
+    {
         name: "Prayer Times CLI",
         category: "cli",
         description: "A simple terminal tool to check today's Islamic prayer times with a clean, minimal, and colorful format.",
         tags: ["Go", "CLI", "Terminal"],
-        image: "resources/projects/prayer-times.png",
+        image: "resources/projects/prayer-times.svg",
         link: "projects/prayer-times/index.html"
     },
     {
@@ -40,7 +48,7 @@ const projects = [
         category: "creative-coding",
         description: "Interactive canvas experiments exploring generative art, particle systems, and visual effects through code.",
         tags: ["JavaScript", "Canvas", "Generative Art"],
-        image: null,
+        image: "resources/projects/creative-coding-icon.svg",
         link: "projects/creative-coding/index.html"
     },
     {
@@ -48,7 +56,7 @@ const projects = [
         category: "mobile-app",
         description: "A physics-based puzzle game that transforms your phone into a motion-controlled playground with challenging mazes.",
         tags: ["Android", "Kotlin", "Game"],
-        image: "resources/images/empty/app_icon.png",
+        image: "resources/projects/empty-icon.svg",
         link: "projects/empty/index.html"
     },
 ];

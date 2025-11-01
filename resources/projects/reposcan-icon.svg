@@ -1,31 +1,48 @@
-<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="400" height="400" fill="#0f172a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#B1D18A" opacity="0.15"/>
 
-  <!-- Terminal window outline -->
-  <rect x="50" y="80" width="300" height="240" rx="8" fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
+  <!-- Terminal window -->
+  <rect x="35" y="50" width="130" height="100" rx="6" fill="#1a1c17" stroke="#FEB52B" stroke-width="2.5"/>
 
-  <!-- Terminal header dots -->
-  <circle cx="75" cy="105" r="6" fill="#ef4444"/>
-  <circle cx="95" cy="105" r="6" fill="#eab308"/>
-  <circle cx="115" cy="105" r="6" fill="#22c55e"/>
+  <!-- Terminal header -->
+  <rect x="35" y="50" width="130" height="18" rx="6" fill="#FEB52B"/>
+  <rect x="35" y="62" width="130" height="6" fill="#FEB52B"/>
 
-  <!-- Terminal content - Git branch icon -->
-  <path d="M 100 150 L 100 200 M 100 150 Q 100 180, 130 180 L 180 180 M 130 180 L 130 230"
-        stroke="#7c3aed" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Terminal dots -->
+  <circle cx="45" cy="56" r="2.5" fill="#1a1c17"/>
+  <circle cx="55" cy="56" r="2.5" fill="#1a1c17"/>
+  <circle cx="65" cy="56" r="2.5" fill="#1a1c17"/>
 
-  <!-- Git nodes -->
-  <circle cx="100" cy="150" r="12" fill="#0ea5e9" stroke="#1e293b" stroke-width="2"/>
-  <circle cx="180" cy="180" r="12" fill="#0ea5e9" stroke="#1e293b" stroke-width="2"/>
-  <circle cx="130" cy="230" r="12" fill="#0ea5e9" stroke="#1e293b" stroke-width="2"/>
-  <circle cx="100" cy="200" r="12" fill="#22c55e" stroke="#1e293b" stroke-width="2"/>
+  <!-- Git branch structure inside terminal -->
+  <g stroke="#B1D18A" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <path d="M 60 80 L 60 120"/>
+    <path d="M 60 80 Q 60 95, 75 95 L 100 95"/>
+    <path d="M 75 95 L 75 130"/>
+  </g>
 
-  <!-- Magnifying glass -->
-  <circle cx="260" cy="210" r="35" fill="none" stroke="#0ea5e9" stroke-width="8"/>
-  <line x1="285" y1="235" x2="315" y2="265" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round"/>
+  <!-- Git commit nodes -->
+  <circle cx="60" cy="80" r="4" fill="#B1D18A"/>
+  <circle cx="100" cy="95" r="4" fill="#FEB52B"/>
+  <circle cx="75" cy="130" r="4" fill="#B1D18A"/>
+  <circle cx="60" cy="120" r="4" fill="#FEB52B"/>
 
-  <!-- Small code-like lines in magnifying glass -->
-  <line x1="245" y1="200" x2="265" y2="200" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
-  <line x1="245" y1="210" x2="275" y2="210" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
-  <line x1="245" y1="220" x2="270" y2="220" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+  <!-- Command line prompt -->
+  <text x="110" y="90" font-family="monospace" font-size="14" fill="#FEB52B" opacity="0.8">$</text>
+  <rect x="120" y="82" width="30" height="2" fill="#B1D18A" opacity="0.6"/>
+
+  <!-- Magnifying glass (scanning) -->
+  <circle cx="140" cy="125" r="22" fill="none" stroke="#FEB52B" stroke-width="3"/>
+  <line x1="156" y1="141" x2="172" y2="157" stroke="#FEB52B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Files/folders being scanned inside magnifying glass -->
+  <rect x="130" y="118" width="8" height="10" fill="#B1D18A" opacity="0.6" rx="1"/>
+  <rect x="140" y="118" width="8" height="10" fill="#B1D18A" opacity="0.6" rx="1"/>
+
+  <!-- Scan lines/rays -->
+  <g stroke="#FEB52B" stroke-width="1.5" opacity="0.4">
+    <line x1="125" y1="115" x2="118" y2="108"/>
+    <line x1="125" y1="125" x2="115" y2="125"/>
+    <line x1="125" y1="135" x2="118" y2="142"/>
+  </g>
 </svg>
