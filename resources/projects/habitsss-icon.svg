@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#FEB52B" opacity="0.15"/>
+
+  <!-- Calendar base -->
+  <rect x="50" y="45" width="100" height="110" rx="8" fill="#1a1c17" stroke="#FEB52B" stroke-width="3"/>
+
+  <!-- Calendar header -->
+  <rect x="50" y="45" width="100" height="25" rx="8" fill="#FEB52B"/>
+  <rect x="50" y="62" width="100" height="8" fill="#FEB52B"/>
+
+  <!-- Calendar rings -->
+  <circle cx="70" cy="45" r="4" fill="#1a1c17"/>
+  <circle cx="100" cy="45" r="4" fill="#1a1c17"/>
+  <circle cx="130" cy="45" r="4" fill="#1a1c17"/>
+
+  <!-- Checkmarks (habit streak) -->
+  <path d="M 65 85 L 72 92 L 85 75" stroke="#B1D18A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 65 105 L 72 112 L 85 95" stroke="#B1D18A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 65 125 L 72 132 L 85 115" stroke="#B1D18A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Progress dots -->
+  <circle cx="110" cy="82" r="3" fill="#FEB52B"/>
+  <circle cx="125" cy="82" r="3" fill="#FEB52B"/>
+  <circle cx="110" cy="102" r="3" fill="#FEB52B"/>
+  <circle cx="125" cy="102" r="3" fill="#FEB52B"/>
+  <circle cx="110" cy="122" r="3" fill="#FEB52B"/>
+  <circle cx="125" cy="122" r="3" fill="#FEB52B"/>
+</svg>
