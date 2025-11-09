@@ -1,0 +1,554 @@
+:root {
+    /* --primary-color: #3377FF; */
+    --primary-color: #729548;
+    --primary-dark: #2a62d4;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    /* border-radius: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.logo-text span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Enhanced Hero Section */
+.hero {
+    padding: 60px 0 100px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(51, 119, 255, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(51, 119, 255, 0.15) 0%, transparent 30%),
+        linear-gradient(135deg, rgba(51, 119, 255, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.app-highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(51, 119, 255, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(51, 119, 255, 0.4);
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.detailed-download-btn-container {
+    align-items: center;
+}
+
+.detailed-download-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    /* padding: 1rem; */
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(51, 119, 255, 0.3);
+    cursor: pointer;
+}
+
+.detailed-download-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(51, 119, 255, 0.4);
+}
+
+.detailed-download-btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detailed-download-btn-content i {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+}
+
+.detailed-download-btn-content .text-sm {
+    font-size: 0.875rem;
+}
+
+.detailed-download-btn-content .text-lg {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+
+.app-showcase {
+    flex: 1;
+    position: relative;
+    min-height: 500px;
+}
+
+.phone-mockup {
+    position: absolute;
+    width: 280px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.screen-1 {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transform: rotate(-5deg) translateY(0);
+    animation: float-1 6s ease-in-out infinite;
+}
+
+.screen-2 {
+    top: 80px;
+    right: 20px;
+    z-index: 2;
+    transform: rotate(5deg);
+    animation: float-2 7s ease-in-out infinite;
+}
+
+.screen-3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    z-index: 1;
+    animation: float-3 5s ease-in-out infinite;
+}
+
+
+.faq-item {
+    /* background-color: var(--white); */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+@keyframes float-1 {
+    0%, 100% { transform: rotate(-5deg) translateY(0); }
+    50% { transform: rotate(-5deg) translateY(-15px); }
+}
+
+@keyframes float-2 {
+    0%, 100% { transform: rotate(5deg) translateY(0); }
+    50% { transform: rotate(5deg) translateY(-15px); }
+}
+
+@keyframes float-3 {
+    0%, 100% { transform: translateX(-50%) rotate(0deg) translateY(0); }
+    50% { transform: translateX(-50%) rotate(0deg) translateY(-10px); }
+}
+
+.app-stats {
+    display: flex;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* Rest of your existing styles... */
+.section-title {
+    text-align: center;
+    margin: 60px 0 40px;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.section-title span {
+    color: var(--primary-color);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(51, 119, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: var(--gray);
+}
+
+.release-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.release:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.release-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.release-version {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.release-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.release-notes h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.release-notes ul {
+    margin-left: 20px;
+    color: var(--gray);
+}
+
+.release-notes li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid var(--light-gray);
+}
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer > .footer-links > a {
+    font-weight: normal;
+    padding: 0rem .5rem 0rem .5rem;
+}
+
+.footer-text {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.footer-call-to-action {
+    text-align: center;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .app-stats {
+        justify-content: center;
+    }
+    
+    .app-showcase {
+        min-height: 400px;
+        width: 100%;
+    }
+    
+    .screen-1 {
+        left: 10%;
+    }
+    
+    .screen-2 {
+        right: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 20px;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .app-showcase {
+        min-height: 350px;
+    }
+    
+    .phone-mockup {
+        width: 220px;
+    }
+    
+    .release-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .release-date {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .hero {
+        padding: 40px 0 80px;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .download-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .app-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .phone-mockup {
+        width: 180px;
+    }
+    
+    .screen-1 {
+        left: 5%;
+    }
+    
+    .screen-2 {
+        right: 5%;
+    }
+}

@@ -17,7 +17,7 @@ const projects = [
         description: "A powerful habit tracking app with cloud sync, widgets, and analytics. Built with 100% Jetpack Compose.",
         tags: ["Android", "Kotlin", "Jetpack Compose"],
         image: "resources/projects/habitsss-icon.svg",
-        link: "https://habitsss.app"
+        link: "projects/habitsss/index.html"
     },
     {
         name: "RepoScan",
