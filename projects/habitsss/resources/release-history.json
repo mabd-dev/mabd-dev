@@ -1,0 +1,138 @@
+{
+    "releases": [
+        {
+            "versionNumber": "0.5.1",
+            "releaseDate": "June 14, 2025",
+            "apkSize": "12.7 MB",
+            "notes": [
+                {
+                    "header": "New",
+                    "changes": [
+                        "Home: boards can be viewed in grid/list view. Go to settings -> ui preferences to change the board view",
+                        "Board Reminder: add 'check-in' buttonn in notification so you can quickly check-in"
+                    ]
+                },
+                {
+                    "header": "Fixed",
+                    "changes": [
+                        "Fix: App crashes when clicking on notification or board in home widget"
+                    ]
+                }
+            ]
+        },
+        {
+            "versionNumber": "0.5.0",
+            "releaseDate": "June 9, 2025",
+            "apkSize": "12.3 MB",
+            "notes": [
+                {
+                    "header": "New",
+                    "changes": [
+                        "Multiple Reminders per Board",
+                        "App update notifier"
+                    ]
+                },
+                {
+                    "header": "Fixed",
+                    "changes": [
+                        "Back gesture behavior in home and settings screens"
+                    ]
+                }
+            ]
+        },
+        {
+            "versionNumber": "0.4.1",
+            "releaseDate": "Aprl 21, 2025",
+            "apkSize": "12.3 MB",
+            "notes": [
+                {
+                    "header": "Updates",
+                    "changes": [
+                        "Updated onboarding",
+                        "Small bug fixes here and their"
+                    ]
+                }
+            ]
+        },
+        {
+            "versionNumber": "0.4.0",
+            "releaseDate": "March 20, 2025",
+            "apkSize": "12.3 MB",
+            "notes": [
+                {
+                    "header": "New",
+                    "changes": [
+                        "Step by step board/habit creation",
+                        "Added manual sync button"
+                    ]
+                },
+                {
+                    "header": "Updates",
+                    "changes": [
+                        "Internal improvements to user and subscription management",
+                        "Resolved sync conflicts between devices",
+                        "Minor UI improvements"
+                    ]
+                },
+                {
+                    "header": "Fixed",
+                    "changes": [
+                        "Feature request screen keeps showing error toast"
+                    ]
+                }
+            ]
+        },
+        {
+            "versionNumber": "0.3.11",
+            "releaseDate": "March 5, 2025",
+            "apkSize": "12.2 MB",
+            "notes": [
+                {
+                    "header": "New",
+                    "changes": [
+                        "In-app feature requests & bug reports screen",
+                        "Added manual sync button"
+                    ]
+                },
+                {
+                    "header": "Updates",
+                    "changes": [
+                        "Show boards in grid/list view (tablet only)",
+                        "Board log comment: remove leading+trailing whitesapce"
+                    ]
+                },
+                {
+                    "header": "Fixed",
+                    "changes": [
+                        "Home: settings red dot is always visible for new users",
+                        "Daily Reminders: save new alarm time, when alarm fires"
+                    ]
+                }
+            ]
+        },
+        {
+            "versionNumber": "0.3.10",
+            "releaseDate": "Feb 20, 2025",
+            "apkSize": "12.2 MB",
+            "notes": [
+                {
+                    "header": "New",
+                    "changes": [
+                        "Settings: ability to change app main color",
+                        "Board card: highlight current day",
+                        "Current month vs Previous month line chart"
+                    ]
+                },
+                {
+                    "header": "Updates",
+                    "changes": [
+                        "Boards ordering: add haptic feedback when dragging",
+                        "New users: set first day of week based on user locale",
+                        "Update screens transitions animation",
+                        "Settings: new ui look :)"
+                    ]
+                }
+            ]
+        }
+    ]
+}
