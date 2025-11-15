@@ -7,7 +7,7 @@ const generateLatestReleaseNotes = () => {
     }
 
     // const detailed 
-    const footerCallToActionDiv =  document.getElementById('footerCallToAction')
+    const footerCallToActionDiv = document.getElementById('footerCallToAction')
 
 
     fetch(releaseHistoryLocation)
@@ -42,7 +42,7 @@ const faqs = [
     },
     {
         q: "Where can I get the latest version of the app?",
-        a: "You can download the latest APK directly from the official website: https://habitsss.app"
+        a: "You can download the latest APK directly from the official website: https://mabd.dev/projects/habitsss/index.html"
     },
     {
         q: "Will I still get app updates?",
@@ -78,12 +78,12 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.map(f => ({
-    "@type": "Question",
-    "name": f.q,
-    "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.a
-    }
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+        }
     }))
 };
 const script = document.createElement('script');
