@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#B1D18A" opacity="0.15"/>
+
+  <!-- Terminal window -->
+  <rect x="40" y="50" width="120" height="100" rx="6" fill="#1a1c17" stroke="#B1D18A" stroke-width="2.5"/>
+
+  <!-- Terminal header -->
+  <rect x="40" y="50" width="120" height="18" rx="6" fill="#B1D18A"/>
+  <rect x="40" y="62" width="120" height="6" fill="#B1D18A"/>
+
+  <!-- Terminal dots -->
+  <circle cx="50" cy="56" r="2.5" fill="#1a1c17"/>
+  <circle cx="60" cy="56" r="2.5" fill="#1a1c17"/>
+  <circle cx="70" cy="56" r="2.5" fill="#1a1c17"/>
+
+  <!-- Task list items -->
+  <g>
+    <!-- Task 1 -->
+    <rect x="50" y="78" width="95" height="14" rx="2" fill="#FEB52B" opacity="0.8"/>
+    <circle cx="56" cy="85" r="2.5" fill="#1a1c17"/>
+    <line x1="64" y1="85" x2="100" y2="85" stroke="#1a1c17" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Task 2 -->
+    <rect x="50" y="97" width="95" height="14" rx="2" fill="#FEB52B" opacity="0.6"/>
+    <circle cx="56" cy="104" r="2.5" fill="#1a1c17"/>
+    <line x1="64" y1="104" x2="110" y2="104" stroke="#1a1c17" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Task 3 (with checkmark - completed) -->
+    <rect x="50" y="116" width="95" height="14" rx="2" fill="#B1D18A" opacity="0.8"/>
+    <path d="M 54 123 L 57 126 L 61 120" stroke="#1a1c17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <line x1="64" y1="123" x2="95" y2="123" stroke="#1a1c17" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Task 4 -->
+    <rect x="50" y="135" width="95" height="14" rx="2" fill="#FEB52B" opacity="0.4"/>
+    <circle cx="56" cy="142" r="2.5" fill="#1a1c17"/>
+    <line x1="64" y1="142" x2="88" y2="142" stroke="#1a1c17" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Lightning bolt with circuit lines (fast TUI) -->
+  <g>
+    <path d="M 132 85 L 126 98 L 132 98 L 129 111" fill="#FEB52B"/>
+    <circle cx="132" cy="80" r="3" fill="#FEB52B" opacity="0.6"/>
+    <circle cx="129" cy="116" r="3" fill="#FEB52B" opacity="0.6"/>
+  </g>
+</svg>

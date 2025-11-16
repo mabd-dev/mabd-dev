@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#FEB52B" opacity="0.15"/>
+
+  <!-- Terminal window -->
+  <rect x="35" y="50" width="130" height="100" rx="6" fill="#1a1c17" stroke="#FEB52B" stroke-width="2.5"/>
+
+  <!-- Terminal header -->
+  <rect x="35" y="50" width="130" height="18" rx="6" fill="#FEB52B"/>
+  <rect x="35" y="62" width="130" height="6" fill="#FEB52B"/>
+
+  <!-- Terminal dots -->
+  <circle cx="45" cy="56" r="2.5" fill="#1a1c17"/>
+  <circle cx="55" cy="56" r="2.5" fill="#1a1c17"/>
+  <circle cx="65" cy="56" r="2.5" fill="#1a1c17"/>
+
+  <!-- Terminal prompt -->
+  <text x="45" y="85" font-family="monospace" font-size="12" fill="#B1D18A">$ gira</text>
+
+  <!-- Jira ticket cards flowing -->
+  <g>
+    <!-- Ticket 1 -->
+    <rect x="50" y="95" width="40" height="24" rx="3" fill="#B1D18A" stroke="#B1D18A" stroke-width="2"/>
+    <text x="56" y="108" font-family="monospace" font-size="10" fill="#1a1c17" font-weight="bold">JIRA-</text>
+    <text x="56" y="117" font-family="monospace" font-size="9" fill="#1a1c17">123</text>
+
+    <!-- Arrow -->
+    <path d="M 92 107 L 102 107" stroke="#FEB52B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 99 104 L 102 107 L 99 110" stroke="#FEB52B" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Ticket 2 -->
+    <rect x="107" y="95" width="40" height="24" rx="3" fill="#FEB52B" stroke="#FEB52B" stroke-width="2"/>
+    <text x="113" y="108" font-family="monospace" font-size="10" fill="#1a1c17" font-weight="bold">JIRA-</text>
+    <text x="113" y="117" font-family="monospace" font-size="9" fill="#1a1c17">456</text>
+  </g>
+
+  <!-- Sprint indicator -->
+  <g>
+    <circle cx="60" cy="132" r="3" fill="#B1D18A"/>
+    <circle cx="70" cy="132" r="3" fill="#B1D18A"/>
+    <circle cx="80" cy="132" r="3" fill="#FEB52B"/>
+    <circle cx="90" cy="132" r="3" fill="#B1D18A" opacity="0.3"/>
+    <circle cx="100" cy="132" r="3" fill="#B1D18A" opacity="0.3"/>
+  </g>
+
+  <!-- Lightning bolt (speed indicator) -->
+  <path d="M 148 95 L 142 110 L 148 110 L 145 125" stroke="#FEB52B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
