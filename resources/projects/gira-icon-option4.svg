@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#FEB52B" opacity="0.15"/>
+
+  <!-- Large Jira-style ticket -->
+  <rect x="45" y="50" width="110" height="100" rx="8" fill="#1a1c17" stroke="#FEB52B" stroke-width="3"/>
+
+  <!-- Ticket header bar -->
+  <rect x="45" y="50" width="110" height="25" rx="8" fill="#FEB52B"/>
+  <rect x="45" y="68" width="110" height="7" fill="#FEB52B"/>
+
+  <!-- Ticket ID -->
+  <text x="55" y="65" font-family="monospace" font-size="12" fill="#1a1c17" font-weight="bold">SPRINT-42</text>
+
+  <!-- Ticket content area -->
+  <g>
+    <!-- Title line -->
+    <line x1="58" y1="90" x2="130" y2="90" stroke="#B1D18A" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="58" y1="98" x2="110" y2="98" stroke="#B1D18A" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Description lines -->
+    <line x1="58" y1="112" x2="125" y2="112" stroke="#FEB52B" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="58" y1="120" x2="118" y2="120" stroke="#FEB52B" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="58" y1="128" x2="135" y2="128" stroke="#FEB52B" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- Priority indicator -->
+  <circle cx="142" cy="90" r="6" fill="#FEB52B"/>
+  <path d="M 142 87 L 142 91" stroke="#1a1c17" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="142" cy="94" r="1" fill="#1a1c17"/>
+
+  <!-- Terminal elements at bottom -->
+  <g opacity="0.8">
+    <rect x="58" y="138" width="4" height="2" fill="#B1D18A"/>
+    <text x="64" y="141" font-family="monospace" font-size="8" fill="#B1D18A">CLI</text>
+
+    <!-- Blinking cursor -->
+    <rect x="85" y="138" width="2" height="6" fill="#B1D18A">
+      <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Speed indicator -->
+  <g stroke="#B1D18A" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <line x1="150" y1="130" x2="160" y2="130"/>
+    <line x1="147" y1="137" x2="158" y2="137"/>
+    <line x1="150" y1="144" x2="160" y2="144"/>
+  </g>
+</svg>

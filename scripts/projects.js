@@ -12,6 +12,14 @@ const labels = {
 
 const projects = [
     {
+        name: "Gira",
+        category: "cli",
+        description: "Fast Jira cli client for viewing and navigating your Jira active sprints",
+        tags: ["Go", "CLI", "Jira"],
+        image: "resources/projects/gira-icon-option4.svg",
+        link: "https://github.com/mabd-dev/gira"
+    },
+    {
         name: "Habitsss",
         category: "mobile-app",
         description: "A powerful habit tracking app with cloud sync, widgets, and analytics. Built with 100% Jetpack Compose.",
