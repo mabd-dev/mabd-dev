@@ -12,6 +12,14 @@ const labels = {
 
 const projects = [
     {
+        name: "Prayer Times Graph",
+        category: "creative-coding",
+        description: "An interactive chart showing how prayer times change throughout the year.",
+        tags: ["JS", "Chart.js"],
+        image: "resources/projects/prayer-times.svg",
+        link: "projects/prayer-times/index.html"
+    },
+    {
         name: "Gira",
         category: "cli",
         description: "Fast Jira cli client for viewing and navigating your Jira active sprints",
@@ -44,12 +52,12 @@ const projects = [
         link: "https://github.com/mabd-dev/kmeta"
     },
     {
-        name: "Prayer Times CLI",
+        name: "Prayer Times Cli",
         category: "cli",
         description: "A simple terminal tool to check today's Islamic prayer times with a clean, minimal, and colorful format.",
         tags: ["Go", "CLI", "Terminal"],
         image: "resources/projects/prayer-times.svg",
-        link: "projects/prayer-times/index.html"
+        link: "projects/prayer-times/index.html#project-2"
     },
     {
         name: "Creative Coding",
@@ -111,9 +119,9 @@ function createProjectCard(project) {
     card.innerHTML = `
         <div class="project-image-container">
             ${project.image
-                ? `<img src="${project.image}" alt="${project.name}" class="project-image">`
-                : `<div class="project-image-placeholder">💻</div>`
-            }
+            ? `<img src="${project.image}" alt="${project.name}" class="project-image">`
+            : `<div class="project-image-placeholder">💻</div>`
+        }
         </div>
         <div class="project-content">
             <div class="project-header">

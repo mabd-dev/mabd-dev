@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Prayer Times CLI - A terminal-based tool to check Islamic prayer times with a clean, colorful interface. Built with Go.">
-    <meta name="keywords" content="prayer times, CLI, terminal, Islamic prayer, Go, command line, developer tools">
+    <meta name="description" content="Prayer Times Projects - A collection of prayer times tools including an interactive visualization and a terminal-based CLI tool. Built with Chart.js and Go.">
+    <meta name="keywords" content="prayer times, CLI, terminal, Islamic prayer, Go, command line, developer tools, data visualization, Chart.js">
     <meta name="author" content="MABD">
-    <meta property="og:title" content="Prayer Times CLI | MABD">
-    <meta property="og:description" content="A terminal-based command-line tool that displays Islamic prayer times in a clean, minimal, and colorful format.">
+    <meta property="og:title" content="Prayer Times Projects | MABD">
+    <meta property="og:description" content="A collection of Islamic prayer times tools featuring an interactive yearly visualization and a terminal-based CLI tool.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/resources/projects/prayer-times.png">
     <link rel="canonical" href="https://mabd.dev/projects/prayer-times">
 
-    <title>Prayer Times CLI | MABD</title>
+    <title>Prayer Times Projects | MABD</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,18 +33,58 @@
         <div class="hero-container">
             <div class="hero-text">
                 <div class="app-header">
-                    <img src="/resources/projects/prayer-times.svg" alt="Prayer Times CLI icon" class="app-icon">
+                    <img src="/resources/projects/prayer-times.svg" alt="Prayer Times Projects icon" class="app-icon">
                     <div>
-                        <h1 class="app-title">Prayer Times CLI</h1>
-                        <p class="app-tagline">Terminal-Based Prayer Times Tool</p>
+                        <h1 class="app-title">Prayer Times Projects</h1>
+                        <p class="app-tagline">Islamic Prayer Times Tools & Visualizations</p>
                     </div>
                 </div>
                 <p class="app-description">
-                    A simple, beautiful command-line interface tool that displays today's Islamic prayer times
-                    directly in your terminal. Features a clean minimal design with colorful output and progress
-                    indicators showing time remaining until the next prayer.
+                    A collection of tools and visualizations for Islamic prayer times. Explore an interactive
+                    yearly graph showing how prayer times change throughout the year, and use a beautiful
+                    terminal-based CLI tool for quick access to daily prayer times.
                 </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Prayer Times Graph Section -->
+    <section class="graph-section" id="project-1">
+        <div class="graph-container">
+            <div class="project-header">
+                <span class="project-badge">Project 1</span>
+                <h2 class="section-title">Prayer Times Visualization 2025</h2>
+            </div>
+            <p class="section-description">
+                An interactive chart showing how prayer times change throughout the year.
+                Observe the beautiful patterns created by the changing seasons and the Earth's tilt.
+            </p>
+            <div class="chart-wrapper">
+                <canvas id="canvas1"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Separator -->
+    <div class="project-separator">
+        <div class="separator-line"></div>
+        <div class="separator-icon">⬥</div>
+        <div class="separator-line"></div>
+    </div>
+
+    <!-- CLI Tool Section -->
+    <section class="cli-section" id="project-2">
+        <div class="cli-container">
+            <div class="project-header">
+                <span class="project-badge">Project 2</span>
+                <h2 class="section-title">Prayer Times CLI Tool</h2>
+            </div>
+            <p class="section-description">
+                A simple, beautiful command-line interface tool that displays today's Islamic prayer times
+                directly in your terminal. Features a clean minimal design with colorful output and progress
+                indicators showing time remaining until the next prayer.
+            </p>
+            <div class="cli-links">
                 <a href="https://github.com/MABD-dev/prayer-times-cli"
                    target="_blank"
                    class="github-btn">
@@ -57,7 +97,7 @@
     <!-- Screenshot Section -->
     <section class="screenshot-section">
         <div class="screenshot-container">
-            <h2 class="section-title">Terminal Preview</h2>
+            <h3 class="subsection-title">Terminal Preview</h3>
             <div class="screenshot-wrapper">
                 <img src="/resources/projects/prayer-times.png" alt="Prayer Times CLI terminal output" />
             </div>
@@ -121,10 +161,24 @@
         </div>
     </section>
 
+    <!-- Acknowledgments Section -->
+    <section class="acknowledgments">
+        <div class="acknowledgments-container">
+            <h2 class="section-title">Data Source & Acknowledgments</h2>
+            <p class="acknowledgments-description">
+                These projects are built using prayer times data graciously provided by the
+                <a href="https://github.com/ibad-al-rahman/prayer-times" target="_blank" class="data-source-link">
+                    ibad-al-rahman/prayer-times
+                </a>
+                repository. Special thanks for making this valuable data publicly available.
+            </p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 MABD. Built with Go.</p>
+            <p>&copy; 2025 MABD. Built with Chart.js and Go.</p>
             <div class="footer-links">
                 <a href="/index.html">Home</a>
                 <a href="https://github.com/mabd-dev" target="_blank">GitHub</a>
@@ -132,5 +186,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Chart.js and Annotation Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+
+    <!-- Prayer Times Graph Script -->
+    <script src="prayer-times-graph.js"></script>
 </body>
 </html>
