@@ -1,12 +1,13 @@
 /* Open Source Contributions Section */
 .contributions-section {
+    width: 100%;
     background: linear-gradient(135deg, #000 0%, #0a0a0a 100%);
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
     border-top: 1px solid rgba(254, 181, 43, 0.1);
 }
 
 .contributions-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -34,7 +35,7 @@
 
 .contributions-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
 }
 
@@ -46,7 +47,10 @@
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .contribution-card:hover {

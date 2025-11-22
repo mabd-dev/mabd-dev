@@ -1,6 +1,20 @@
 // Open Source Contributions data
 const contributions = [
     {
+        title: "Prayer Times",
+        organization: "github@ibad-al-rahman",
+        description: "Ibad's Android codebase for the public app",
+        techStack: ["android", "jetpack-compose", "MVI", "Widgets"],
+        url: "https://github.com/nsh07/Tomato"
+    },
+    {
+        title: "Tomato",
+        organization: "github@nsh07",
+        description: "Minimalist, data-oriented pomodoro timer for Android based on Material 3 Expressive ",
+        techStack: ["android", "jetpack-compose", "material3-expressive"],
+        url: "https://github.com/nsh07/Tomato"
+    },
+    {
         title: "nvimawscli",
         organization: "github@zuzmuz",
         description: "A plugin to manage aws cli from inside neovim",
