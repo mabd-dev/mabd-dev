@@ -15,13 +15,6 @@ const contributions = [
         url: "https://github.com/nsh07/Tomato"
     },
     {
-        title: "nvimawscli",
-        organization: "github@zuzmuz",
-        description: "A plugin to manage aws cli from inside neovim",
-        techStack: ["lua"],
-        url: "https://github.com/zuzmuz/nvimawscli"
-    },
-    {
         title: "JetpackComposeTracker",
         organization: "github@qamarelsafadi",
         description: "A tool to track you recomposition state in real-time ! ",
@@ -49,6 +42,13 @@ const contributions = [
         techStack: ["android", "jetpack-compose", "kotlin"],
         url: "https://github.com/esatgozcu/Compose-Rolling-Number"
     },
+    {
+        title: "nvimawscli",
+        organization: "github@zuzmuz",
+        description: "A plugin to manage aws cli from inside neovim",
+        techStack: ["lua"],
+        url: "https://github.com/zuzmuz/nvimawscli"
+    }
 ];
 
 // Render contributions
