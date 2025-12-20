@@ -1,11 +1,19 @@
 // Open Source Contributions data
 const contributions = [
+    
+    {
+        title: "LintingGuild",
+        organization: "github@qamarelsafadi",
+        description: "Demo of custom Android Lint rules for Jetpack Compose applications",
+        techStack: ["lint", "tooling", "android", "jetpack-compose"],
+        url: "https://github.com/qamarelsafadi/LintingGuild"
+    },
     {
         title: "Prayer Times",
         organization: "github@ibad-al-rahman",
         description: "Ibad's Android codebase for the public app",
-        techStack: ["android", "jetpack-compose", "MVI", "Widgets"],
-        url: "https://github.com/nsh07/Tomato"
+        techStack: ["MVI", "Widgets", "android", "jetpack-compose"],
+        url: "https://github.com/ibad-al-rahman/android-public"
     },
     {
         title: "Tomato",
