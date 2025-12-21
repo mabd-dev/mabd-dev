@@ -1,0 +1,68 @@
+name: Update OSS Contributions
+
+# Manual trigger only
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    name: Fetch and Commit OSS Stats
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25'
+
+      - name: Install gh-oss-stats
+        run: go install github.com/gh-oss-tools/gh-oss-stats/cmd/gh-oss-stats@latest
+
+      - name: Create output directory
+        run: mkdir -p scripts/oss-contributions
+
+      - name: Run gh-oss-stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_OSS_TOKEN }}
+        run: |
+          gh-oss-stats \
+            --user mabd-dev \
+            --include-loc=true \
+            -v=true \
+            --exclude-orgs="gh-oss-tools" \
+            -o scripts/oss-contributions/contributions.json
+
+      - name: Configure Git
+        run: |
+          git config user.name "MABD"
+          git config user.email "mabd.universe@gmail.com"
+
+      - name: Commit and push changes
+        run: |
+          git add scripts/oss-contributions/contributions.json
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update OSS contributions data
+
+          🤖 Generated with [gh-oss-stats](https://github.com/gh-oss-tools/gh-oss-stats)
+
+          Co-Authored-By: gh-oss-stats <noreply@gh-oss-tools.com>"
+
+            git push
+          fi
+
+      - name: Upload artifact (backup)
+        uses: actions/upload-artifact@v4
+        with:
+          name: oss-contributions
+          path: scripts/oss-contributions/contributions.json
+          retention-days: 30
