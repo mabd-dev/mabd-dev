@@ -55,8 +55,6 @@ jobs:
 
           🤖 Generated with [gh-oss-stats](https://github.com/gh-oss-tools/gh-oss-stats)
 
-          Co-Authored-By: gh-oss-stats <noreply@gh-oss-tools.com>"
-
             git push
           fi
 
