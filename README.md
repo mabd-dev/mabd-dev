@@ -22,6 +22,9 @@
 
 <br>
 
+![OSS Stats](./images/oss-badge.svg)
+
+<br>
 
 
 <h3 align="left">Connect with me:</h3>
