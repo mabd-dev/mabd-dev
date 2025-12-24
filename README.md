@@ -22,7 +22,7 @@
 
 <br>
 
-![OSS Stats](./oss-badge.svg)
+![OSS Stats](./images/oss-badge.svg)
 
 <br>
 

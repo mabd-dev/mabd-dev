@@ -33,7 +33,7 @@ jobs:
             --badge \
             --badge-style summary \
             --badge-theme dark \
-            --badge-output oss-badge.svg
+            --badge-output images/oss-badge.svg
       
       - name: Commit badge
         run: |
