@@ -22,6 +22,10 @@
 
 <br>
 
+![OSS Stats](./images/oss-badge.svg)
+
+<br>
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -36,9 +40,8 @@
 
 
 <!-- <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mabd-dev&" alt="mabd-dev" /></p> -->
-[![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev)](https://git.io/streak-stats)
+![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev)
 
-![OSS Stats](./images/oss-badge.svg)
 
 ### Let's Connect
 
