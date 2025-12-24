@@ -36,7 +36,7 @@
 
 
 <!-- <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mabd-dev&" alt="mabd-dev" /></p> -->
-<p><img align="center" src="https://streak-stats.demolab.com/?user=mabd-dev" /><p>
+[![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev)](https://git.io/streak-stats)
 
 ![OSS Stats](./images/oss-badge.svg)
 
