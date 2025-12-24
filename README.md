@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=mabd-dev&label=Profile%20views&color=0e75b6&style=flat" alt="mabd-dev" /> </p>
 
-- 🔭 I’m currently working on [Github OSS Tools](https://github.com/mabd-dev/gh-oss-stats)
+- 🔭 I’m currently working on [Github OSS Stats](https://github.com/mabd-dev/gh-oss-stats)
 
 - 👨‍💻 All of my projects are available at [https://mabd.dev](https://mabd.dev)
 
@@ -11,18 +11,10 @@
 
 - 💬 Ask me about **android, kotlin**
 
-
-### Open Source Contributions
-
-| Type   | Repo  |
-| ---------------------------------------------------------------------- | ---------------------------------------- |
-| <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"> | [qamarelsafadi/JetpackComposeTracker](https://github.com/qamarelsafadi/JetpackComposeTracker)<br> [android/nav3-recipes](https://github.com/android/nav3-recipes)<br> [android/cahier](https://github.com/android/cahier)<br> [esatgozcu/Compose-Rolling-Number](https://github.com/esatgozcu/Compose-Rolling-Number) <br> [nsh07/Tomato](https://github.com/nsh07/Tomato) <br> [ibad-al-rahman/android-public](https://github.com/ibad-al-rahman/android-public) |
-| <img src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"> | [zuzmuz/nvimawscli](https://github.com/zuzmuz/nvimawscli) |
-
-
+[![OSS Stats](./images/oss-badge.svg)](https://github.com/mabd-dev/gh-oss-stats)
 <br>
 
-![OSS Stats](./images/oss-badge.svg)
+![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev)
 
 <br>
 
@@ -40,7 +32,7 @@
 
 
 <!-- <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mabd-dev&" alt="mabd-dev" /></p> -->
-![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev)
+
 
 
 ### Let's Connect
