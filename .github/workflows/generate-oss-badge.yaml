@@ -23,7 +23,7 @@ jobs:
       
       - name: Generate badge
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_OSS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh-oss-stats \
             --user ${{ github.repository_owner }} \
