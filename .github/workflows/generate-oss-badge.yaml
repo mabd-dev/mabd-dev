@@ -27,12 +27,13 @@ jobs:
         run: |
           gh-oss-stats \
             --user ${{ github.repository_owner }} \
+            --verbose
             --include-loc
             --exclude-orgs="gh-oss-tools"
             --badge
             --badge-style summary \
             --badge-theme dark \
-            --badge-output images/oss-badge.svg
+            --badge-output oss-badge.svg
       
       - name: Commit badge
         run: |
