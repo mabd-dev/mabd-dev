@@ -22,10 +22,6 @@
 
 <br>
 
-![OSS Stats](./images/oss-badge.svg)
-
-<br>
-
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -39,7 +35,10 @@
 
 
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mabd-dev&" alt="mabd-dev" /></p>
+<!-- <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mabd-dev&" alt="mabd-dev" /></p> -->
+<p><img align="center" src="https://streak-stats.demolab.com/?user=mabd-dev" /><p>
+
+![OSS Stats](./images/oss-badge.svg)
 
 ### Let's Connect
 
