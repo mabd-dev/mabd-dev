@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=mabd-dev&label=Profile%20views&color=0e75b6&style=flat" alt="mabd-dev" /> </p>
 
-- 🔭 I’m currently working on [Github OSS Tools](https://github.com/gh-oss-tools/gh-oss-stats)
+- 🔭 I’m currently working on [Github OSS Tools](https://github.com/mab-dev/gh-oss-stats)
 
 - 👨‍💻 All of my projects are available at [https://mabd.dev](https://mabd.dev)
 
