@@ -2,7 +2,7 @@ name: Update OSS Badge
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every Hour
+    - cron: '0 0 * * 0'  # Weekly
   workflow_dispatch:
 
 permissions:
