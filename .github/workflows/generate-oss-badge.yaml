@@ -2,7 +2,7 @@ name: Update OSS Badge
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every Minute
+    - cron: '0 * * * *'  # Every Hour
   workflow_dispatch:
 
 permissions:
@@ -28,7 +28,7 @@ jobs:
           gh-oss-stats \
             --user ${{ github.repository_owner }} \
             --verbose \
-            --include-loc=true \
+            --include-loc \
             --exclude-orgs="gh-oss-tools" \
             --badge \
             --badge-style summary \
