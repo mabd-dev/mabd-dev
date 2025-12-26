@@ -117,12 +117,6 @@ function createProjectCard(project) {
     const categoryLabel = getCategoryLabel(project.category);
 
     card.innerHTML = `
-        <div class="project-image-container">
-            ${project.image
-            ? `<img src="${project.image}" alt="${project.name}" class="project-image">`
-            : `<div class="project-image-placeholder">💻</div>`
-        }
-        </div>
         <div class="project-content">
             <div class="project-header">
                 <h3 class="project-name">${project.name}</h3>
