@@ -12,12 +12,12 @@ const labels = {
 
 const projects = [
     {
-        name: "Prayer Times Graph",
-        category: "creative-coding",
-        description: "An interactive chart showing how prayer times change throughout the year.",
-        tags: ["JS", "Chart.js"],
-        image: "resources/projects/prayer-times.svg",
-        link: "projects/prayer-times/index.html"
+        name: "Github OSS Stats",
+        category: "cli",
+        description: "Showcase your open source contributions with auto - updating GitHub profile badges",
+        tags: ["Go", "CLI", "Github", "OSS-Contributions"],
+        image: "resources/projects/gira-icon-option4.svg",
+        link: "https://github.com/mabd-dev/gh-oss-stats"
     },
     {
         name: "Gira",
@@ -57,7 +57,7 @@ const projects = [
         description: "A simple terminal tool to check today's Islamic prayer times with a clean, minimal, and colorful format.",
         tags: ["Go", "CLI", "Terminal"],
         image: "resources/projects/prayer-times.svg",
-        link: "projects/prayer-times/index.html#project-2"
+        link: "projects/prayer-times/index.html"
     },
     {
         name: "Creative Coding",
@@ -145,7 +145,7 @@ function createProjectCard(project) {
     card.addEventListener('click', (e) => {
         // Don't trigger if clicking the link directly
         if (!e.target.closest('.project-link')) {
-            window.location.href = project.link;
+            window.open(project.link, '_blank')
         }
     });
 
