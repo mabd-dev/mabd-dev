@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Mahmoud</h1>
 <h3 align="center">Software Developer specializing in mobile and backend development with a focus on building scalable, maintainable applications.</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=mabd-dev&label=Profile%20views&color=0e75b6&style=flat" alt="mabd-dev" /> </p>
+<!-- <p align="left"> <img src="https://komarev.com/ghpvc/?username=mabd-dev&label=Profile%20views&color=0e75b6&style=flat" alt="mabd-dev" /> </p> -->
 
-- 🔭 I’m currently working on [Github OSS Stats](https://github.com/mabd-dev/gh-oss-stats)
+- 🔭 I’m currently working on [Github OSS Stats](https://github.com/mabd-dev/gh-oss-stats) & [Github OSS Stats Action](https://github.com/mabd-dev/gh-oss-stats-action) 
 
 - 👨‍💻 All of my projects are available at [https://mabd.dev](https://mabd.dev)
 
@@ -12,6 +12,9 @@
 - 💬 Ask me about **android, kotlin**
 
 [![OSS Stats](./images/oss-badge.svg)](https://github.com/mabd-dev/gh-oss-stats)
+
+see [Detailed List](https://mabd.dev/#contributions-list)
+
 <br>
 
 ![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev)
