@@ -21,3 +21,4 @@ jobs:
           badge-style: summary
           badge-theme: dark
           badge-output: images/oss-badge.svg
+          version: latest
