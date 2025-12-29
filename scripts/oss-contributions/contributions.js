@@ -3,26 +3,26 @@ const contributionsOverrides = {
     "ibad-al-rahman/android-public": {
         title: "Prayer Times",
         description: "Islamic prayer times",
-        techStack: ["android", "jetpack-compose", "MVI", "Widgets"]
+        techStack: ["Android", "Jetpack-Compose", "MVI", "Widgets"]
     },
     "nsh07/Tomato": {
-        techStack: ["android", "jetpack-compose", "material3-expressive"]
+        techStack: ["Android", "Material3-Expressive"]
     },
     "qamarelsafadi/JetpackComposeTracker": {
-        techStack: ["android", "jetpack-compose", "kotlin"]
+        techStack: ["Compose-Multiplatform"]
     },
     "android/nav3-recipes": {
-        techStack: ["android", "jetpack-navigation-3", "jetpack-compose", "kotlin"]
+        techStack: ["Android", "Navigation-3"]
     },
     "android/cahier": {
         description: "Cahier is a feature-rich, offline-first note-taking application built to showcase modern Android development best practices",
-        techStack: ["android", "jetpack-compose", "kotlin"],
+        techStack: ["Android", "Jetpack-Compose", "Kotlin"],
     },
     "esatgozcu/Compose-Rolling-Number": {
-        techStack: ["android", "jetpack-compose", "kotlin"]
+        techStack: ["Android", "Jetpack-Compose", "Plugin"]
     },
     "zuzmuz/nvimawscli": {
-        techStack: ["lua"]
+        techStack: ["Lua", "AWS"]
     }
 }
 

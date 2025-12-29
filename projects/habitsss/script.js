@@ -50,7 +50,7 @@ const faqs = [
     },
     {
         q: "Is the app free?",
-        a: "Yes. Current app version (v0.4.1) has some features behind paywall, but they will be available for free in the next update."
+        a: "Yes. Current app version (v0.5.1) has some features behind paywall, but they will be available for free in the next update."
     },
     {
         q: "Is my data private and secure?",
