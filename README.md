@@ -11,9 +11,8 @@
 
 - 💬 Ask me about **android, kotlin**
 
-[![OSS Stats](./images/oss-badge.svg)](https://github.com/mabd-dev/gh-oss-stats)
 
-see [Detailed List](https://mabd.dev/#contributions-list)
+<!-- see [Detailed List](https://mabd.dev/#contributions-list) -->
 
 <br>
 
