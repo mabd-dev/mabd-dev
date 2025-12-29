@@ -14,8 +14,8 @@ const projects = [
     {
         name: "Github OSS Stats",
         category: "cli",
-        description: "Showcase your open source contributions with auto - updating GitHub profile badges",
-        tags: ["Go", "CLI", "Github", "OSS-Contributions"],
+        description: "Showcase your open source contributions with auto updating GitHub profile badges",
+        tags: ["Go", "Github Marketplace"],
         image: "resources/projects/gira-icon-option4.svg",
         link: "https://github.com/mabd-dev/gh-oss-stats"
     },
@@ -31,7 +31,7 @@ const projects = [
         name: "Habitsss",
         category: "mobile-app",
         description: "A powerful habit tracking app with cloud sync, widgets, and analytics. Built with 100% Jetpack Compose.",
-        tags: ["Android", "Kotlin", "Jetpack Compose"],
+        tags: ["Firebase", "Admob", "Widgets", "MVVM"],
         image: "resources/projects/habitsss-icon.svg",
         link: "projects/habitsss/index.html"
     },
@@ -39,15 +39,15 @@ const projects = [
         name: "RepoScan",
         category: "cli",
         description: "A fast CLI tool to scan your system for Git repositories and report uncommitted files, unpushed commits, and unpulled changes.",
-        tags: ["Go", "CLI", "Git"],
+        tags: ["Go", "Bubble-Tea"],
         image: "resources/projects/reposcan-icon.svg",
         link: "projects/reposcan/index.html"
     },
     {
         name: "KMeta",
         category: "library",
-        description: "Kotlin Metaprogramming & Code Generation Toolkit using KSP for automatic code generation with annotations like @Loggable, @Copy, and @ToNiceString.",
-        tags: ["Kotlin", "KSP", "Metaprogramming"],
+        description: "Kotlin Meta-programming & code generation toolkit using KSP for automatic code generation with annotations like @Loggable, @Copy, and @ToNiceString.",
+        tags: ["Kotlin", "KSP", "Meta-programming"],
         image: "resources/projects/kmeta-icon.svg",
         link: "https://github.com/mabd-dev/kmeta"
     },
@@ -55,7 +55,7 @@ const projects = [
         name: "Prayer Times Cli",
         category: "cli",
         description: "A simple terminal tool to check today's Islamic prayer times with a clean, minimal, and colorful format.",
-        tags: ["Go", "CLI", "Terminal"],
+        tags: ["Go", "CLI"],
         image: "resources/projects/prayer-times.svg",
         link: "projects/prayer-times/index.html"
     },
@@ -63,7 +63,7 @@ const projects = [
         name: "Creative Coding",
         category: "creative-coding",
         description: "Interactive canvas experiments exploring generative art, particle systems, and visual effects through code.",
-        tags: ["JavaScript", "Canvas", "Generative Art"],
+        tags: ["JavaScript", "Canvas"],
         image: "resources/projects/creative-coding-icon.svg",
         link: "projects/creative-coding/index.html"
     },
@@ -71,7 +71,7 @@ const projects = [
         name: "Empty",
         category: "mobile-app",
         description: "A physics-based puzzle game that transforms your phone into a motion-controlled playground with challenging mazes.",
-        tags: ["Android", "Kotlin", "Game"],
+        tags: ["Android", "In house physics", "admob"],
         image: "resources/projects/empty-icon.svg",
         link: "projects/empty/index.html"
     },
