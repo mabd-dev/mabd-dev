@@ -13,7 +13,7 @@
 
 ![OSS Contributions](oss-badge.svg)
 
-<!-- see [Detailed List](https://mabd.dev/#contributions-list) -->
+see [Detailed List](https://mabd.dev/#contributions-list)
 
 <br>
 
