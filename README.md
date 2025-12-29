@@ -11,7 +11,7 @@
 
 - 💬 Ask me about **android, kotlin**
 
-![OSS Contributions](images/oss-badge.svg)
+![OSS Contributions](oss-badge.svg)
 
 <!-- see [Detailed List](https://mabd.dev/#contributions-list) -->
 
