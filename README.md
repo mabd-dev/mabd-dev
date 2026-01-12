@@ -17,7 +17,7 @@ see [Detailed List](https://mabd.dev/#contributions-list)
 
 <br>
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev)
+<!-- ![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev) -->
 
 <br>
 
