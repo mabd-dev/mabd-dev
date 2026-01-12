@@ -1,58 +1,322 @@
+
 <svg
-  width="400"
-  height="200"
-  viewBox="0 0 400 200"
+  width="900"
+  height="518"
+  viewBox="0 0 900 518"
   xmlns="http://www.w3.org/2000/svg"
   role="img"
-  aria-label="Open Source Contribution Summary">
+  aria-label="GitHub Open Source Contribution Stats">
+
+  <!-- ========================= -->
+  <!-- Theme + Styling -->
+  <!-- ========================= -->
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-alt: #161b22;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --star: #e3b341;
+    }
+
+    text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 800;
+      fill: var(--text);
+      letter-spacing: -0.4px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      fill: var(--text-muted);
+    }
+
+    .card {
+      fill: url(#cardGradient);
+      stroke: var(--border);
+      stroke-width: 1;
+      rx: 14;
+    }
+
+    .card-glass {
+      fill: url(#glass);
+      rx: 14;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      fill: var(--text-muted);
+    }
+
+    .metric-value {
+      font-size: 28px;
+      font-weight: 800;
+      fill: var(--text);
+    }
+
+    .repo-name {
+      font-size: 16px;
+      font-weight: 700;
+      fill: var(--text);
+    }
+
+    .repo-meta {
+      font-size: 12px;
+      fill: var(--text-muted);
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- ========================= -->
+  <!-- Definitions -->
+  <!-- ========================= -->
   <defs>
-    <style>
-      text {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                     "Segoe UI", Helvetica, Arial, sans-serif;
-      }
-      .bg {
-        fill: #0d1117;
-      }
-      .card {
-        fill: #161b22;
-      }
-      .username {
-        font-size: 18px;
-        font-style: italic;
-        font-weight: 700;
-        fill: #e6edf3;
-      }
-      .subtitle {
-        font-size: 12px;
-        fill: #8b949e;
-      }
-      .stat-value {
-        font-size: 26px;
-        font-style: italic;
-        font-weight: 700;
-        fill: #e6edf3;
-      }
-      .stat-label {
-        font-size: 11px;
-        fill: #8b949e;
-      }
-    </style>
+    <linearGradient id="cardGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg-alt)" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="var(--bg-alt)" stop-opacity="0.6" />
+    </linearGradient>
+
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg-alt)" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="var(--bg-alt)" stop-opacity="0" />
+    </linearGradient>
   </defs>
+
+  <!-- ========================= -->
   <!-- Background -->
-  <rect class="bg" width="400" height="200" rx="16"/>
+  <!-- ========================= -->
+  <rect
+    x="0"
+    y="0"
+    width="900"
+    height="518"
+    rx="18"
+    fill="var(--bg)"
+  />
+
+  <!-- ========================= -->
   <!-- Header -->
-  <text class="username" x="28" y="42">@mabd-dev</text>
-  <text class="subtitle" x="28" y="62">open source contributions</text>
-  <!-- Stat Cards -->
-  <rect class="card" x="22" y="91" width="108" height="70" rx="10"/>
-  <rect class="card" x="146" y="91" width="108" height="70" rx="10"/>
-  <rect class="card" x="270" y="91" width="108" height="70" rx="10"/>
-  <!-- Stats -->
-  <text class="stat-value" x="76" y="123" text-anchor="middle">7</text>
-  <text class="stat-label" x="76" y="144" text-anchor="middle">PROJECTS</text>
-  <text class="stat-value" x="200" y="123" text-anchor="middle">17</text>
-  <text class="stat-label" x="200" y="144" text-anchor="middle">PRS MERGED</text>
-  <text class="stat-value" x="324" y="123" text-anchor="middle">1.9K</text>
-  <text class="stat-label" x="324" y="144" text-anchor="middle">LINES CHANGED</text>
+  <!-- ========================= -->
+  <g class="fade-in">
+    <text x="32" y="50" class="title">
+      mabd-dev · Open Source
+    </text>
+  </g>
+
+  <!-- ========================= -->
+  <!-- Metrics Row -->
+  <!-- ========================= -->
+
+  <!-- Projects -->
+  <g class="fade-in" style="animation-delay: 100ms">
+    <rect x="32" y="96" width="260" height="96" class="card"/>
+    <rect x="32" y="96" width="260" height="96" class="card-glass"/>
+    <text x="48" y="132" class="metric-label">Projects</text>
+    <text x="48" y="168" class="metric-value">7</text>
+  </g>
+
+  <!-- PRs -->
+  <g class="fade-in" style="animation-delay: 150ms">
+    <rect x="320" y="96" width="260" height="96" class="card"/>
+    <rect x="320" y="96" width="260" height="96" class="card-glass"/>
+    <text x="336" y="132" class="metric-label">PRs Merged</text>
+    <text x="336" y="168" class="metric-value">17</text>
+  </g>
+
+  <!-- Lines Changed -->
+  <g class="fade-in" style="animation-delay: 200ms">
+    <rect x="608" y="96" width="260" height="96" class="card"/>
+    <rect x="608" y="96" width="260" height="96" class="card-glass"/>
+    <text x="624" y="132" class="metric-label">Lines Changed</text>
+    <text x="624" y="168" class="metric-value">1.9K</text>
+  </g>
+
+  <!-- ========================= -->
+  <!-- Top Contributions -->
+  <!-- ========================= -->
+  <text x="32" y="224" class="subtitle fade-in" style="animation-delay: 260ms">
+    Top Contributions
+  </text>
+
+  
+  
+  
+  <g class="fade-in" style="animation-delay: 300ms">
+    <rect
+      x="32"
+      y="240"
+      width="260"
+      height="108"
+      class="card"
+    />
+    <rect
+      x="32"
+      y="240"
+      width="260"
+      height="108"
+      class="card-glass"
+    />
+
+    <text
+      x="48"
+      y="278"
+      class="repo-name">
+      android-public
+    </text>
+    <text
+      x="48"
+      y="304"
+      class="repo-meta">
+      ⭐ 0 · 6 PRs Merged
+    </text>
+  </g>
+  
+  
+  
+  <g class="fade-in" style="animation-delay: 380ms">
+    <rect
+      x="320"
+      y="240"
+      width="260"
+      height="108"
+      class="card"
+    />
+    <rect
+      x="320"
+      y="240"
+      width="260"
+      height="108"
+      class="card-glass"
+    />
+
+    <text
+      x="336"
+      y="278"
+      class="repo-name">
+      Tomato
+    </text>
+    <text
+      x="336"
+      y="304"
+      class="repo-meta">
+      ⭐ 902 · 2 PRs Merged
+    </text>
+  </g>
+  
+  
+  
+  <g class="fade-in" style="animation-delay: 460ms">
+    <rect
+      x="608"
+      y="240"
+      width="260"
+      height="108"
+      class="card"
+    />
+    <rect
+      x="608"
+      y="240"
+      width="260"
+      height="108"
+      class="card-glass"
+    />
+
+    <text
+      x="624"
+      y="278"
+      class="repo-name">
+      JetpackComposeTracker
+    </text>
+    <text
+      x="624"
+      y="304"
+      class="repo-meta">
+      ⭐ 94 · 2 PRs Merged
+    </text>
+  </g>
+  
+  
+  
+  <g class="fade-in" style="animation-delay: 540ms">
+    <rect
+      x="32"
+      y="360"
+      width="260"
+      height="108"
+      class="card"
+    />
+    <rect
+      x="32"
+      y="360"
+      width="260"
+      height="108"
+      class="card-glass"
+    />
+
+    <text
+      x="48"
+      y="398"
+      class="repo-name">
+      nav3-recipes
+    </text>
+    <text
+      x="48"
+      y="424"
+      class="repo-meta">
+      ⭐ 1.1K · 2 PRs Merged
+    </text>
+  </g>
+  
+  
+  
+  <g class="fade-in" style="animation-delay: 620ms">
+    <rect
+      x="320"
+      y="360"
+      width="260"
+      height="108"
+      class="card"
+    />
+    <rect
+      x="320"
+      y="360"
+      width="260"
+      height="108"
+      class="card-glass"
+    />
+
+    <text
+      x="336"
+      y="398"
+      class="repo-name">
+      cahier
+    </text>
+    <text
+      x="336"
+      y="424"
+      class="repo-meta">
+      ⭐ 298 · 2 PRs Merged
+    </text>
+  </g>
+  
+
 </svg>
+
