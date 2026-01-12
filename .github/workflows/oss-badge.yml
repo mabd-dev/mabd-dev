@@ -17,3 +17,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           badge-output-path: 'oss-badge.svg'
           badge-style: 'detailed'
+          badge-limit: 6
