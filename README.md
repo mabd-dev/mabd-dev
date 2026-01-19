@@ -15,14 +15,30 @@
 
 see [Detailed List](https://mabd.dev/#contributions-list)
 
+&nbsp; &nbsp;
+
+<p>
+  <img
+    align="left"
+    src="https://github-readme-stats.vercel.app/api/top-langs?username=mabd-dev&show_icons=true&locale=en&layout=compact&theme=github_dark"
+    alt="mabd-dev"
+  />
+</p>
+
+<p>
+ <img
+    align="center"
+    src="https://github-readme-stats.vercel.app/api?username=mabd-dev&show_icons=true&locale=en&theme=github_dark"
+    alt="mabd-dev"
+  />
+</p>
+
 <br>
 
-<!-- ![GitHub Streak](https://streak-stats.demolab.com/?user=mabd-dev) -->
-
-<br>
 
 
-<h3 align="left">Connect with me:</h3>
+
+<h3 align="left">Social Links:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/mahmoud-abdallah-66200915b" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mahmoud-abdallah-66200915b" height="30" width="40" /></a>
 <a href="https://medium.com/@mabd.dev" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="mabd.dev" height="30" width="40" /></a>
