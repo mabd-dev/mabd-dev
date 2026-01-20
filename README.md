@@ -1,85 +1,135 @@
-# Hi, I'm Mahmoud 👋
+<h1 align="center">Hi, I'm Mahmoud 👋</h1>
 
-Software Developer specializing in mobile and backend development with a focus on building scalable, maintainable applications.
+<p>
+  Software Developer specializing in mobile and backend development with a focus on
+  building scalable, maintainable applications.
+</p>
 
----
+<hr />
 
-## What I'm Working On
-- 🔭 [Github OSS Stats](https://github.com/mabd-dev/gh-oss-stats) & [Github OSS Stats Action](https://github.com/mabd-dev/gh-oss-stats-action)
-- 👨‍💻 Portfolio: [mabd.dev](https://mabd.dev)
-- 📝 Writing on [Medium](https://medium.com/@mabd.dev)
+<h2>🚀 What I'm Working On</h2>
+<ul>
+  <li>
+    🔭
+    <a href="https://github.com/mabd-dev/gh-oss-stats">Github OSS Stats</a>
+    &
+    <a href="https://github.com/mabd-dev/gh-oss-stats-action">Github OSS Stats Action</a>
+  </li>
+  <li>👨‍💻 Portfolio: <a href="https://mabd.dev">mabd.dev</a></li>
+  <li>📝 Writing on <a href="https://medium.com/@mabd.dev">Medium</a></li>
+</ul>
 
----
+<hr />
 
-## 📝 Latest Articles
-I write about **software engineering, Go, AI tooling, and developer productivity** on Medium.
+<h2>📝 Latest Articles</h2>
 
-👉 **Follow me on Medium:** [medium.com/@mabd.dev](https://medium.com/@mabd.dev)
+<p>
+  I write about <strong>software engineering, Go, AI tooling, and developer productivity</strong>.
+  <br />
+  👉 <a href="https://medium.com/@mabd.dev"><strong>medium.com/@mabd.dev</strong></a>
+</p>
 
-### 🧠 Featured
-#### **Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel**
-Stop your AI agents from stepping on each other. Git worktrees enable true parallel development with Claude Code, Codex, and other AI tools.  
-🔗 [Read article →](https://medium.com/@mabd.dev/git-worktrees-the-secret-weapon-for-running-multiple-ai-coding-agents-in-parallel-e9046451eb96)  
-📅 Dec 9, 2025 · ⏱ 5 min read  
-🏷️ `AI` `AI Agents` `git-worktrees` `vibe-coding`
+<table>
+  <tr>
+    <td width="100%" valign="top">
+      <h3>🧠 Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel</h3>
+      <p>
+        Stop your AI agents from stepping on each other. Git worktrees enable true
+        parallel development with Claude Code, Codex, and other AI tools.
+      </p>
+      <p>
+        🔗 <a href="https://medium.com/@mabd.dev/git-worktrees-the-secret-weapon-for-running-multiple-ai-coding-agents-in-parallel-e9046451eb96">Read article</a><br />
+        📅 Dec 9, 2025 · ⏱ 5 min read<br />
+        🏷️ AI · AI Agents · git-worktrees · vibe-coding
+      </p>
+    </td>
+  </tr>
 
----
+  <tr>
+    <td width="100%" valign="top">
+      <h3>🔧 I Built a Tool to Track My Open Source Contributions</h3>
+      <p>
+        GitHub’s contribution graph shows activity—but not impact. I built a tool to
+        track which open-source projects I actually contributed to.
+      </p>
+      <p>
+        🔗 <a href="https://medium.com/@mabd.dev/i-built-a-tool-to-track-my-open-source-contributions-b2af92c955e7">Read article</a><br />
+        🔧 Repositories:
+        <a href="https://github.com/mabd-dev/gh-oss-stats">gh-oss-stats</a>,
+        <a href="https://github.com/mabd-dev/gh-oss-stats-action">gh-oss-stats-action</a><br />
+        📅 Dec 22, 2025 · ⏱ 4 min read<br />
+        🏷️ Go · Custom GitHub Actions · Mobile Development
+      </p>
+    </td>
+  </tr>
 
-#### **I Built a Tool to Track My Open Source Contributions**
-GitHub’s contribution graph shows activity—but not *impact*. I built a tool to track which open-source projects I actually contributed to.  
-🔗 [Read article →](https://medium.com/@mabd.dev/i-built-a-tool-to-track-my-open-source-contributions-b2af92c955e7)  
-🔧 Repos: [gh-oss-stats](https://github.com/mabd-dev/gh-oss-stats) [gh-oss-stats-action](https://github.com/mabd-dev/gh-oss-stats-action)  
-📅 Dec 22, 2025 · ⏱ 4 min read  
-🏷️ `Go` `Custom GitHub Actions` `Mobile Development`
+  <tr>
+    <td width="100%" valign="top">
+      <h3>🔍 Search Engine from Scratch — Part 1: The Inverted Index</h3>
+      <p>
+        From naive string matching to information retrieval. Building a text-based
+        search engine in Go, one concept at a time.
+      </p>
+      <p>
+        🔗 <a href="https://medium.com/@mabd.dev/building-a-search-engine-from-scratch-the-inverted-index-019c599b3c59">Read article</a><br />
+        🔧 Repository:
+        <a href="https://github.com/mabd-dev/search-engine">search-engine</a><br />
+        📅 Nov 20, 2024 · ⏱ 3 min read<br />
+        🏷️ Search Engine · Go
+      </p>
+    </td>
+  </tr>
+</table>
 
----
+<hr />
 
-#### **Search Engine from Scratch — Part 1: The Inverted Index**
-From naive string matching to real information retrieval. Building a text-based search engine in Go, one concept at a time.  
-🔗 [Read article →](https://medium.com/@mabd.dev/building-a-search-engine-from-scratch-the-inverted-index-019c599b3c59)  
-🔧 Repos: [search-engine](https://github.com/mabd-dev/search-engine)  
-📅 Nov 20, 2024 · ⏱ 3 min read  
-🏷️ `Search Engine` `Go`
+<h2>📊 OSS Contributions</h2>
+<p>
+  <img src="oss-badge.svg" alt="OSS Contributions" />
+  <br />
+  <a href="https://mabd.dev/#contributions-list">View detailed list →</a>
+</p>
 
----
+<hr />
 
-## OSS Contributions
-![OSS Contributions](oss-badge.svg)  
-[View detailed list →](https://mabd.dev/#contributions-list)
-
----
-
-## GitHub Stats
+<h2>📈 GitHub Stats</h2>
 <p>
   <img
+    src="https://github-readme-stats.vercel.app/api/top-langs?username=mabd-dev&layout=compact&theme=github_dark"
+    alt="Top languages"
     align="left"
-    src="https://github-readme-stats.vercel.app/api/top-langs?username=mabd-dev&show_icons=true&locale=en&layout=compact&theme=github_dark"
-    alt="mabd-dev"
   />
+</p>
+<p>
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=mabd-dev&show_icons=true&theme=github_dark"
+    alt="GitHub stats"
+    align="center"
+  />
+</p>
+
+<hr />
+
+<h2>🛠 Tech Stack</h2>
+<p>
+  <strong>Mobile:</strong> Android, Kotlin, Jetpack Compose, Firebase<br />
+  <strong>Backend:</strong> Go, Java, Django<br />
+  <strong>Frontend:</strong> Vue.js<br />
+  <strong>Tools:</strong> Linux, Figma
+</p>
+
+<hr />
+
+<h2>🤝 Connect</h2>
+<p>
+  <a href="https://linkedin.com/in/mahmoud-abdallah-66200915b">LinkedIn</a> ·
+  <a href="https://medium.com/@mabd.dev">Medium</a> ·
+  <a href="https://www.leetcode.com/mabd-dev">LeetCode</a>
 </p>
 
 <p>
-  <img
-    align="center"
-    src="https://github-readme-stats.vercel.app/api?username=mabd-dev&show_icons=true&locale=en&theme=github_dark"
-    alt="mabd-dev"
-  />
+  <em>
+    Open to collaboration on interesting projects.
+    Let’s talk software architecture, mobile development, or backend systems.
+  </em>
 </p>
-
----
-
-## Tech Stack
-**Mobile:** Android, Kotlin, Jetpack Compose, Firebase  
-**Backend:** Go, Java, Django  
-**Frontend:** Vue.js  
-**Tools:** Linux, Figma
-
----
-
-## Connect
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/mahmoud-abdallah-66200915b)
-[![Medium](https://img.shields.io/badge/Medium-12100E?style=flat&logo=medium&logoColor=white)](https://medium.com/@mabd.dev)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=white)](https://www.leetcode.com/mabd-dev)
-
----
-Open to collaboration on interesting projects. Let's talk software architecture, mobile development, or backend systems.
