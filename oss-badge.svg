@@ -138,7 +138,7 @@
     <rect x="320" y="96" width="260" height="96" class="card"/>
     <rect x="320" y="96" width="260" height="96" class="card-glass"/>
     <text x="336" y="132" class="metric-label">PRs Merged</text>
-    <text x="336" y="168" class="metric-value">18</text>
+    <text x="336" y="168" class="metric-value">19</text>
   </g>
 
   <!-- Lines Changed -->
@@ -185,7 +185,7 @@
       x="48"
       y="304"
       class="repo-meta">
-      ⭐ 0 · 7 PRs Merged
+      ⭐ 0 · 8 PRs Merged
     </text>
   </g>
   
@@ -217,7 +217,7 @@
       x="336"
       y="304"
       class="repo-meta">
-      ⭐ 921 · 2 PRs Merged
+      ⭐ 926 · 2 PRs Merged
     </text>
   </g>
   
@@ -313,7 +313,7 @@
       x="336"
       y="424"
       class="repo-meta">
-      ⭐ 308 · 2 PRs Merged
+      ⭐ 310 · 2 PRs Merged
     </text>
   </g>
   
