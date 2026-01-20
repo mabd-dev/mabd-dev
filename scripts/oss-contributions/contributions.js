@@ -16,10 +16,10 @@ const contributionsOverrides = {
     },
     "android/cahier": {
         description: "Cahier is a feature-rich, offline-first note-taking application built to showcase modern Android development best practices",
-        techStack: ["Android", "Jetpack-Compose", "Kotlin"],
+        techStack: ["Android", "Canvas"],
     },
     "esatgozcu/Compose-Rolling-Number": {
-        techStack: ["Android", "Jetpack-Compose", "Plugin"]
+        techStack: ["Android", "Plugin"]
     },
     "zuzmuz/nvimawscli": {
         techStack: ["Lua", "AWS"]
