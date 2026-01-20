@@ -22,7 +22,9 @@ jobs:
           go-version: '1.25'
 
       - name: Install gh-oss-stats
-        run: go install github.com/mabd-dev/gh-oss-stats/cmd/gh-oss-stats@latest
+        run: |
+            curl -fSL -o gh-oss-stats "https://github.com/mabd-dev/gh-oss-stats/releases/latest/download/gh-oss-stats-linux-arm64"
+            chmod +x gh-oss-stats
 
       - name: Create output directory
         run: mkdir -p scripts/oss-contributions
@@ -37,25 +39,11 @@ jobs:
             -v=true \
             -o scripts/oss-contributions/contributions.json
 
-      - name: Configure Git
-        run: |
-          git config user.name "MABD"
-          git config user.email "mabd.universe@gmail.com"
-
-      - name: Commit and push changes
-        run: |
-          git add scripts/oss-contributions/contributions.json
-
-          # Check if there are changes to commit
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update OSS contributions data
-
-          🤖 Generated with [gh-oss-stats](https://github.com/mabd-dev/gh-oss-stats)
-
-            git push
-          fi
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Updated OSS contributions data'
+          file_pattern: scripts/oss-contributions/contributions.json
 
       - name: Upload artifact (backup)
         uses: actions/upload-artifact@v4
