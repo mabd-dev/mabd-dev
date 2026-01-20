@@ -12,6 +12,13 @@ const labels = {
 
 const projects = [
     {
+        name: "Doc Gen AI",
+        category: "cli",
+        description: "A Neovim plugin that generates code documentation using Local/Remote LLMs",
+        tags: ["Neovim", "Ollama", "Open-AI API"],
+        link: "https://github.com/mabd-dev/doc-gen-ai.nvim"
+    },
+    {
         name: "Github OSS Stats",
         category: "cli",
         description: "Showcase your open source contributions with auto updating GitHub profile badges",
