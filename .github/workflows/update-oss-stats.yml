@@ -33,7 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_OSS_TOKEN }}
         run: |
-          gh-oss-stats \
+          ./gh-oss-stats \
             --user mabd-dev \
             --include-loc=true \
             -v=true \
