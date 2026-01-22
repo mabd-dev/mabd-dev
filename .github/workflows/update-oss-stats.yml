@@ -2,6 +2,8 @@ name: Update OSS Contributions
 
 # Manual trigger only
 on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday at midnight
   workflow_dispatch:
 
 permissions:
