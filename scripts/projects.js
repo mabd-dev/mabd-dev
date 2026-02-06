@@ -32,7 +32,7 @@ const projects = [
         description: "Fast Jira cli client for viewing and navigating your Jira active sprints",
         tags: ["Go", "CLI", "Jira"],
         image: "resources/projects/gira-icon-option4.svg",
-        link: "https://github.com/mabd-dev/gira"
+        link: "https://github.com/mabd-dev/gira-cli"
     },
     {
         name: "Habitsss",
