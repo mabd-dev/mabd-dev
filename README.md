@@ -43,6 +43,8 @@
         🏷️ Vim · Compose Multiplatform · Productivity
       </p>
     </td>
+  </tr>
+  <tr>
     <td width="100%" valign="top">
       <h3>🧠 Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel</h3>
       <p>
