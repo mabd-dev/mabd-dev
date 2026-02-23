@@ -34,6 +34,18 @@
     <td width="100%" valign="top">
       <h3>🧠 Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel</h3>
       <p>
+        Jira is powerful — but painfully slow for keyboard-driven workflows.
+        As a daily Vim user, I kept reaching for speed that simply wasn’t there… so I built my own keyboard-first Jira client using Compose Multiplatform and a custom Vim engine.
+      </p>
+      <p>
+        🔗 <a href="https://medium.com/@mabd.dev/building-a-vim-powered-jira-client-with-compose-multiplatform-claude-21bbf29477df">Read article</a><br />
+        📅 Feb 23, 2026 · ⏱ 13 min read<br />
+        🏷️ Vim · Compose Multiplatform · Productivity
+      </p>
+    </td>
+    <td width="100%" valign="top">
+      <h3>🧠 Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel</h3>
+      <p>
         Stop your AI agents from stepping on each other. Git worktrees enable true
         parallel development with Claude Code, Codex, and other AI tools.
       </p>
