@@ -32,7 +32,7 @@
 <table>
   <tr>
     <td width="100%" valign="top">
-      <h3>🧠 Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel</h3>
+      <h3>Building a Vim-Powered Jira Client with Compose Multiplatform & Claude</h3>
       <p>
         Jira is powerful — but painfully slow for keyboard-driven workflows.
         As a daily Vim user, I kept reaching for speed that simply wasn’t there… so I built my own keyboard-first Jira client using Compose Multiplatform and a custom Vim engine.
