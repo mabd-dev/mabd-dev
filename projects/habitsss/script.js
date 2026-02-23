@@ -1,52 +1,17 @@
 
-const generateLatestReleaseNotes = () => {
-    const releasesDiv = document.getElementById('latest-release')
-    if (releasesDiv == null) {
-        console.warn("could not find 'latest-release' element")
-        return
-    }
-
-    // const detailed 
-    const footerCallToActionDiv = document.getElementById('footerCallToAction')
-
-
-    fetch(releaseHistoryLocation)
-        .then(response => response.json())
-        .then(data => {
-            const history = data['releases'][0]
-            const releaseCard = createReleaseCardDiv(history)
-
-            const downloadButton = createDetailedDownloadButton(history['apkSize'])
-            releaseCard.appendChild(downloadButton)
-
-            const downloadButtonWithVersion = createDetailedDownloadButton(history['apkSize'], history['versionNumber'])
-            footerCallToActionDiv.appendChild(downloadButtonWithVersion)
-
-            releasesDiv.appendChild(releaseCard)
-
-            // this has to happen after buttons are added to DOM
-            handleDownloadBtn()
-        })
-}
-
-generateLatestReleaseNotes()
-
-
-
-
 
 const faqs = [
     {
         q: "Why is Habitsss no longer on the Google Play Store?",
-        a: "Due to issues verifying my physical address with Google, my developer account was removed — even though my identity was verified. I'm working to publish the app on other stores like F-Droid. Meanwhile, updates are available here on this site."
+        a: "Due to issues verifying my physical address with Google, my developer account was removed — even though my identity was verified. I'm working to publish the app on other stores like F-Droid. Meanwhile, updates are available on GitHub Releases and via Obtainium."
     },
     {
         q: "Where can I get the latest version of the app?",
-        a: "You can download the latest APK directly from the official website: https://mabd.dev/projects/habitsss/index.html"
+        a: "You can download the latest APK from GitHub Releases: https://github.com/mabd-dev/Habitsss/releases/latest — or install and track updates automatically via Obtainium."
     },
     {
         q: "Will I still get app updates?",
-        a: "Yes! The app has a built-in update checker. You'll be notified when a new version is available on the website."
+        a: "Yes! You can track updates via GitHub Releases or use Obtainium to get automatic notifications when a new version is available."
     },
     {
         q: "Is the app free?",

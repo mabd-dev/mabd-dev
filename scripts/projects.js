@@ -59,7 +59,7 @@ const projects = [
         link: "https://github.com/mabd-dev/kmeta"
     },
     {
-        name: "Prayer Times Cli",
+        name: "Prayer Times",
         category: "cli",
         description: "A simple terminal tool to check today's Islamic prayer times with a clean, minimal, and colorful format.",
         tags: ["Go", "CLI"],
