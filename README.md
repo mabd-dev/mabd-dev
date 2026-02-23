@@ -20,6 +20,36 @@
 </ul>
 
 <hr />
+<h2>⭐ Featured Project — Habitsss</h2>
+
+<table>
+  <tr>
+    <td width="260" align="center">
+      <img src="https://raw.githubusercontent.com/mabd-dev/habitsss/main/assets/app-icon.png" width="120" alt="Habitsss icon"/>
+      <br /><br />
+      <img src="https://raw.githubusercontent.com/mabd-dev/habitsss/main/media/thumbnails/boards.jpg" width="200" alt="Habitsss preview"/>
+    </td>
+    <td valign="top">
+      <h3>Habitsss — Android Habit Tracker</h3>
+      <p>
+      A production-grade habit tracking application focused on streaks, analytics,
+      and long-term consistency.
+      </p>
+      <p>
+      📱 <strong>350+ real users on Google Play</strong><br />
+      🏗️ Built with multi-module clean architecture<br />
+      📊 Advanced analytics & widget support<br />
+      ⚡ Jetpack Compose + Kotlin
+      </p>
+      <p>
+      🔗 <a href="https://github.com/mabd-dev/habitsss"><strong>View Releases</strong></a><br />
+      📥 <a href="https://github.com/mabd-dev/habitsss/releases/latest"><strong>Download APK</strong></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+<hr />
 
 <h2>📝 Latest Articles</h2>
 
@@ -102,11 +132,13 @@
   <img src="oss-badge.svg" alt="OSS Contributions" />
   <br />
   <a href="https://mabd.dev/#contributions-list">View detailed list →</a>
+  <br />
+  Built with <a href="https://github.com/mabd-dev/gh-oss-stats">gs-oss-stats</a>
 </p>
 
 <hr />
 
-<h2>📈 GitHub Stats</h2>
+<!-- <h2>📈 GitHub Stats</h2>
 <p>
   <img
     src="https://github-readme-stats.vercel.app/api/top-langs?username=mabd-dev&layout=compact&theme=github_dark"
@@ -120,9 +152,9 @@
     alt="GitHub stats"
     align="center"
   />
-</p>
+</p> -->
 
-<hr />
+<!-- <hr /> -->
 
 <h2>🛠 Tech Stack</h2>
 <p>
