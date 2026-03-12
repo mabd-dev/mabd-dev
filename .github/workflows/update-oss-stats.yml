@@ -10,71 +10,28 @@ permissions:
   contents: write
 
 jobs:
-  update-stats:
-    name: Fetch and Commit OSS Stats
+  generate-stats:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: '1.25'
-
-      - name: Download gh-oss-stats
-        shell: bash
-        run: |
-          echo "::group::Installing gh-oss-stats binary"
-          
-          OS=$(uname -s | tr '[:upper:]' '[:lower:]')  # Linux -> linux, Darwin -> darwin
-          ARCH=$(uname -m)
-          
-          # Map architecture names
-          case "$ARCH" in
-            x86_64)  ARCH="amd64" ;;
-            aarch64) ARCH="arm64" ;;
-            arm64)   ARCH="arm64" ;;  # macOS reports arm64 directly
-            *)
-              echo "::error::Unsupported architecture: $ARCH"
-              exit 1
-              ;;
-          esac
-          
-          BINARY="gh-oss-stats-${OS}-${ARCH}"
-          
-          # Validate supported combinations
-          case "$BINARY" in
-            gh-oss-stats-linux-amd64|gh-oss-stats-linux-arm64|gh-oss-stats-darwin-arm64)
-              echo "Downloading $BINARY..."
-              ;;
-            *)
-              echo "::error::Unsupported platform: ${OS}/${ARCH}"
-              echo "::error::Supported: linux/amd64, linux/arm64, darwin/arm64"
-              exit 1
-              ;;
-          esac
-          
-          curl -fSL -o gh-oss-stats \
-            "https://github.com/mabd-dev/gh-oss-stats/releases/latest/download/${BINARY}"
-          chmod +x gh-oss-stats
-          
-          echo "✅ Installed $BINARY"
-          echo "::endgroup::"
+      - uses: actions/checkout@v4
 
       - name: Create output directory
         run: mkdir -p scripts/oss-contributions
+      
+      - name: Generate OSS Stats
+        id: stats
+        uses: mabd-dev/gh-oss-stats-action@0.2.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          mode: fetch
 
-      - name: Run gh-oss-stats
+      - name: Save stats to file
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_JSON: ${{ steps.stats.output.json }}
         run: |
-          ./gh-oss-stats \
-            --user mabd-dev \
-            --include-loc=true \
-            -v=true \
-            -o scripts/oss-contributions/contributions.json
+          echo "Saving stats to json"
+          echo "$STATS_JSON" | jq .
+          echo "$STATS_JSON" > scripts/oss-contributions/contributions.json
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
