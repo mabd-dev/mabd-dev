@@ -23,7 +23,6 @@ jobs:
         uses: mabd-dev/gh-oss-stats-action@v0.2.2
         with:
           username: mabd-dev
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           mode: fetch
 
       - name: Save stats to file
