@@ -136,6 +136,10 @@
   Built with <a href="https://github.com/mabd-dev/gh-oss-stats">gs-oss-stats</a>
 </p>
 
+
+<br />
+<img width="45%" src="github-stats.svg" alt="MABD's Github Stats" />
+
 <hr />
 
 <!-- <h2>📈 GitHub Stats</h2>
