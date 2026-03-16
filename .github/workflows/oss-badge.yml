@@ -17,3 +17,21 @@ jobs:
           badge-output-path: 'oss-badge.svg'
           badge-style: 'detailed'
           badge-limit: 6
+
+      - name: Fetch GitHub Stats SVG
+        run: |
+          response=$(curl -s -w "\n%{http_code}" "https://github-readme-stats.vercel.app/api?username=mabd-dev&show_icons=true&count_private=true&hide_title=false&theme=github_dark")
+          http_code=$(echo "$response" | tail -1)
+          body=$(echo "$response" | head -n -1)
+
+          if [ "$http_code" = "200" ] && echo "$body" | grep -q "<svg"; then
+            echo "$body" > github-stats.svg
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add github-stats.svg
+            git diff --cached --quiet || git commit -m "Update GitHub stats SVG"
+            git push
+          else
+            echo "Failed to fetch SVG or response is not an SVG (HTTP $http_code)"
+            exit 1
+          fi
