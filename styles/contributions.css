@@ -235,6 +235,23 @@
     border-color: rgba(254, 181, 43, 0.4);
 }
 
+.contributions-external-link-icon {
+    flex-shrink: 0;
+    color: #FEB52B;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contributions-external-link-icon:hover {
+    color: #B1D18A;
+    background-color: rgba(254, 181, 43, 0.1);
+    transform: translateY(-2px);
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
     .contributions-list {
