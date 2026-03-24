@@ -20,10 +20,9 @@ jobs:
       
       - name: Generate OSS Stats
         id: stats
-        uses: mabd-dev/gh-oss-stats-action@v0.2.1
+        uses: mabd-dev/gh-oss-stats-action@v0.2.2
         with:
           username: mabd-dev
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           mode: fetch
 
       - name: Save stats to file
