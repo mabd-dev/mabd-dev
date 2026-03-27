@@ -5,7 +5,7 @@
   building scalable, maintainable applications.
 </p>
 
-<hr />
+<!-- <hr />
 
 <h2>🚀 What I'm Working On</h2>
 <ul>
@@ -17,7 +17,7 @@
   </li>
   <li>👨‍💻 Portfolio: <a href="https://mabd.dev">mabd.dev</a></li>
   <li>📝 Writing on <a href="https://medium.com/@mabd.dev">Medium</a></li>
-</ul>
+</ul> -->
 
 <hr />
 <h2>⭐ Featured Project — Habitsss</h2>
@@ -172,9 +172,11 @@
 
 <h2>🤝 Connect</h2>
 <p>
+  <a href="https://mabd.dev">mabd.dev</a> ·
   <a href="https://linkedin.com/in/mahmoud-abdallah-66200915b">LinkedIn</a> ·
   <a href="https://medium.com/@mabd.dev">Medium</a> ·
-  <a href="https://www.leetcode.com/mabd-dev">LeetCode</a>
+  <a href="https://www.leetcode.com/mabd-dev">LeetCode</a> 
+  
 </p>
 
 <p>
