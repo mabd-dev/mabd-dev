@@ -12,6 +12,13 @@ const labels = {
 
 const projects = [
     {
+        name: "Gira Desktop App",
+        category: "app",
+        description: "Vim-powered Jira client for developers. Keyboard-driven issue management with bulk operations — no more endless clicking",
+        tags: ["Compose-Multiplatform", "vim-engine", "jira"],
+        link: "https://github.com/mabd-dev/Gira"
+    },
+    {
         name: "Doc Gen AI",
         category: "cli",
         description: "A Neovim plugin that generates code documentation using Local/Remote LLMs",
@@ -27,7 +34,7 @@ const projects = [
         link: "https://github.com/mabd-dev/gh-oss-stats"
     },
     {
-        name: "Gira",
+        name: "Gira Cli",
         category: "cli",
         description: "Fast Jira cli client for viewing and navigating your Jira active sprints",
         tags: ["Go", "CLI", "Jira"],
