@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: mabd-dev/gh-oss-stats-action@v0.2.2
+      - uses: mabd-dev/gh-oss-stats-action@v0.2.3
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           badge-output-path: 'oss-badge.svg'
           badge-style: 'detailed'
           badge-limit: 6
