@@ -24,6 +24,7 @@ jobs:
         with:
           username: mabd-dev
           mode: fetch
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Save stats to file
         env:
