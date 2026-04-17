@@ -55,7 +55,7 @@ const projects = [
         description: "A fast CLI tool to scan your system for Git repositories and report uncommitted files, unpushed commits, and unpulled changes.",
         tags: ["Go", "Bubble-Tea"],
         image: "resources/projects/reposcan-icon.svg",
-        link: "projects/reposcan/index.html"
+        link: "https://github.com/mabd-dev/reposcan"
     },
     {
         name: "KMeta",
