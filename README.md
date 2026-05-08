@@ -69,6 +69,8 @@
       </p>
       <p>
         🔗 <a href="https://medium.com/@mabd.dev/building-a-vim-powered-jira-client-with-compose-multiplatform-claude-21bbf29477df">Read article</a><br />
+        🔧 Repositories:
+        <a href="https://github.com/mabd-dev/gira">Gira</a><br />
         📅 Feb 23, 2026 · ⏱ 13 min read<br />
         🏷️ Vim · Compose Multiplatform · Productivity
       </p>
@@ -107,7 +109,7 @@
     </td>
   </tr>
 
-  <tr>
+  <!--<tr>
     <td width="100%" valign="top">
       <h3>🔍 Search Engine from Scratch — Part 1: The Inverted Index</h3>
       <p>
@@ -122,7 +124,7 @@
         🏷️ Search Engine · Go
       </p>
     </td>
-  </tr>
+  </tr>-->
 </table>
 
 <hr />
