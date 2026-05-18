@@ -12,6 +12,13 @@ const labels = {
 
 const projects = [
     {
+        name: "Paws",
+        category: "macos app",
+        description: "Paws lets you clean your Mac keyboard safely by blocking all keystrokes with a single click.",
+        tags: ["SwiftUI"],
+        link: "https://github.com/mabd-dev/paws"
+    },
+    {
         name: "Gira Desktop App",
         category: "app",
         description: "Vim-powered Jira client for developers. Keyboard-driven issue management with bulk operations — no more endless clicking",
