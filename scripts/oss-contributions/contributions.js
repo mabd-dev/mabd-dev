@@ -23,6 +23,9 @@ const contributionsOverrides = {
     },
     "zuzmuz/nvimawscli": {
         techStack: ["Lua", "AWS"]
+    },
+    "linreal/cascade-editor": {
+        techStack: ["rich-text-editor", "comose-multiplatform"]
     }
 }
 
@@ -81,8 +84,6 @@ function renderContributions() {
             return response.json();
         })
         .then(data => {
-            console.log(data)
-
             // If no contributions, hide the section or show a message
             if (data.contributions.length === 0) {
                 container.innerHTML = '<p style="text-align: center; color: #e0e0e0; opacity: 0.7;">No contributions to display yet.</p>';
@@ -126,6 +127,15 @@ function createContributionCard(contribution) {
     card.target = '_blank';
     card.className = 'contribution-card';
 
+    let techStack = ''
+    if (contribution.techStack) {
+        techStack = `
+            <div class="contribution-tech">
+                ${contribution.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+            </div>
+        `
+    }
+
     card.innerHTML = `
         <div class="contribution-header">
             <div class="contribution-title-group">
@@ -165,9 +175,7 @@ function createContributionCard(contribution) {
         <!--     </div> -->
         <!-- </div> -->
         
-        <div class="contribution-tech">
-            ${contribution.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
-        </div>
+        ${techStack}
     `;
 
     return card;
