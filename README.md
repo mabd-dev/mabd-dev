@@ -135,7 +135,7 @@
   <br />
   <a href="https://mabd.dev/#contributions-list">View detailed list →</a>
   <br />
-  Built with <a href="https://github.com/mabd-dev/gh-oss-stats">gs-oss-stats</a>
+  Built with <a href="https://github.com/mabd-dev/gh-oss-stats">gh-oss-stats</a>
 </p>
 
 
