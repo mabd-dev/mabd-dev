@@ -25,7 +25,7 @@
 <table>
   <tr>
     <td valign="top">
-      <h3>Fedo — In-App Feedback SDK</h3>
+      <h3>Fedo - In-App Feedback SDK</h3>
       <p>
       Turn user feedback into a roadmap users vote on. An SDK that lets users
       submit ideas, vote on features, and track roadmap progress without leaving your app.
