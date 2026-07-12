@@ -20,7 +20,28 @@
 </ul> -->
 
 <hr />
-<h2>⭐ Featured Project — Habitsss</h2>
+<h2>⭐ Featured Projects</h2>
+
+<table>
+  <tr>
+    <td valign="top">
+      <h3>Fedo — In-App Feedback SDK</h3>
+      <p>
+      Turn user feedback into a roadmap users vote on. An SDK that lets users
+      submit ideas, vote on features, and track roadmap progress without leaving your app.
+      </p>
+      <p>
+      🧩 One-method native integration - zero UI building<br />
+      🗳️ User voting, comment threads & metadata tracking<br />
+      📋 Dashboard with Kanban workflow (Open → In Review → Planned → In Progress → Shipped)<br />
+      🤖 Android (Kotlin) available now · iOS, Flutter & React Native coming soon
+      </p>
+      <p>
+      🔗 <a href="https://getfedo.com"><strong>getfedo.com</strong></a>
+      </p>
+    </td>
+  </tr>
+</table>
 
 <table>
   <tr>
