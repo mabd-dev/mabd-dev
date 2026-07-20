@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://mabd.dev/projects/reposcan/sitemap.xml
+Sitemap: https://mabd.dev/sitemap.xml
