@@ -147,7 +147,13 @@ function createProjectCard(project) {
             <div class="project-tags">
                 ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
             </div>
-            <a href="${project.link}" class="project-link" ${project.link.startsWith('http') ? 'target="_blank"' : ''}>
+            <a 
+                href="${project.link}" 
+                class="project-link" ${project.link.startsWith('http') ? 'target="_blank"' : ''}
+                data-umami-event="project-click"
+                data-umami-event-name="${project.name}"
+                data-umami-event-category="${categoryLabel}"
+            >
                 View Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -160,6 +166,10 @@ function createProjectCard(project) {
     card.addEventListener('click', (e) => {
         // Don't trigger if clicking the link directly
         if (!e.target.closest('.project-link')) {
+            window.umami.track('project-click', {
+                name: project.name,
+                category: categoryLabel
+            });
             window.open(project.link, '_blank')
         }
     });

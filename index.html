@@ -50,6 +50,12 @@
     <link rel="apple-touch-icon" sizes="16x16" href="resources/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" href="resources/favicon/apple-touch-icon.png">
 
+    <script defer
+        src="https://analytics.mabd.dev/script.js"
+        data-website-id="b143716d-c6a5-434f-a13a-cb81fa5426b6"
+        data-host-url="https://analytics.mabd.dev">
+    </script>
+
 </head>
 <body>
 
@@ -66,10 +72,24 @@
                 </p>
 
                 <div class="social-links">
-                    <a href="https://github.com/mabd-dev" target="_blank" class="social-link" aria-label="GitHub">
+                    <a 
+                        href="https://github.com/mabd-dev" 
+                        target="_blank" 
+                        class="social-link" 
+                        aria-label="GitHub"
+                        data-umami-event="github-click"
+                        data-umami-event-location="hero-section"
+                    >
                         <img src="resources/images/github-142-svgrepo-com.svg" alt="GitHub">
                     </a>
-                    <a href="https://medium.com/@mabd.dev" target="_blank" class="social-link" aria-label="Medium">
+                    <a 
+                        href="https://medium.com/@mabd.dev" 
+                        target="_blank" 
+                        class="social-link" 
+                        aria-label="Medium"
+                        data-umami-event="medium-click"
+                        data-umami-event-location="hero-section"
+                    >
                         <img src="resources/images/medium-svgrepo-com.svg" alt="Medium">
                     </a>
                 </div>
@@ -156,9 +176,27 @@
             <div class="footer-section">
                 <h4 class="footer-heading">Connect</h4>
                 <div class="footer-links">
-                    <a href="https://github.com/mabd-dev" target="_blank" class="footer-link">GitHub</a>
-                    <a href="https://medium.com/@mabd.dev" target="_blank" class="footer-link">Medium</a>
-                    <a href="mailto:mabd.dev@gmail.com" target="_blank" class="footer-link">Gmail</a>
+                    <a 
+                        href="https://github.com/mabd-dev" 
+                        target="_blank" 
+                        class="footer-link"
+                        data-umami-event="github-click"
+                        data-umami-event-location="footer"
+                    >GitHub</a>
+                    <a 
+                        href="https://medium.com/@mabd.dev" 
+                        target="_blank" 
+                        class="footer-link"
+                        data-umami-event="medium-click"
+                        data-umami-event-location="footer"
+                    >Medium</a>
+                    <a 
+                        href="mailto:mabd.dev@gmail.com" 
+                        target="_blank" 
+                        class="footer-link"
+                        data-umami-event="mail-click"
+                        data-umami-event-location="footer"
+                    >Gmail</a>
                 </div>
             </div>
 

@@ -122,9 +122,7 @@ function processContribution(contribution) {
 
 // Create contribution card
 function createContributionCard(contribution) {
-    const card = document.createElement('a');
-    card.href = contribution.url;
-    card.target = '_blank';
+    const card = document.createElement('div');
     card.className = 'contribution-card';
 
     let techStack = ''
@@ -142,7 +140,15 @@ function createContributionCard(contribution) {
                 <h3 class="contribution-title">${contribution.title}</h3>
                 <p class="contribution-org">github@${contribution.owner}</p>
             </div>
-            <a href="${contribution.url}" target="_blank" rel="noopener noreferrer" class="contributions-external-link-icon" aria-label="View on Github">
+            <a 
+                href="${contribution.url}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="contributions-external-link-icon" 
+                aria-label="View on Github"
+                data-umami-event="oss-click"
+                data-umami-event-title="${contribution.title}"
+            >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -177,6 +183,16 @@ function createContributionCard(contribution) {
         
         ${techStack}
     `;
+
+    card.addEventListener('click', (e) => {
+        // Don't trigger if clicking the link directly
+        if (!e.target.closest('.contributions-external-link-icon')) {
+            window.umami.track('oss-click', {
+                title: contribution.title,
+            });
+            window.open(contribution.url, '_blank')
+        }
+    });
 
     return card;
 }

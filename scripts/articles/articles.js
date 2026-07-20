@@ -31,7 +31,15 @@ function createArticleCard(article) {
         <div class="article-content">
             <div class="article-header">
                 <h3 class="article-title">${article.title}</h3>
-                <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="external-link-icon" aria-label="Read on Medium">
+                <a 
+                    href="${article.url}" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="external-link-icon" 
+                    aria-label="Read on Medium"
+                    data-umami-event="article-click"
+                    data-umami-event-title="${article.title}"
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         <polyline points="15 3 21 3 21 9"></polyline>
@@ -71,6 +79,9 @@ function createArticleCard(article) {
     card.addEventListener('click', (e) => {
         // Don't trigger if clicking the external link icon directly
         if (!e.target.closest('.external-link-icon')) {
+             window.umami.track('article-click', {
+                title: article.title,
+            });
             window.open(article.url, '_blank', 'noopener,noreferrer');
         }
     });
