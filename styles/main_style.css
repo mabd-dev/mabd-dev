@@ -275,6 +275,25 @@ body {
     }
 }
 
+/* Skip to content link */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: #FEB52B;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    z-index: 1000;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 @media (max-width: 480px) {
     .hero-section {
         padding: 1rem;
