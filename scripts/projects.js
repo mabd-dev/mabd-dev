@@ -37,7 +37,6 @@ const projects = [
         category: "cli",
         description: "Showcase your open source contributions with auto updating GitHub profile badges",
         tags: ["Go", "Github Marketplace"],
-        image: "resources/projects/gira-icon-option4.svg",
         link: "https://github.com/mabd-dev/gh-oss-stats"
     },
     {
@@ -45,7 +44,6 @@ const projects = [
         category: "cli",
         description: "Fast Jira cli client for viewing and navigating your Jira active sprints",
         tags: ["Go", "CLI", "Jira"],
-        image: "resources/projects/gira-icon-option4.svg",
         link: "https://github.com/mabd-dev/gira-cli"
     },
     {
