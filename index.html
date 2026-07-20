@@ -75,6 +75,7 @@
                     <a 
                         href="https://github.com/mabd-dev" 
                         target="_blank" 
+                        rel="noopener noreferrer"
                         class="social-link" 
                         aria-label="GitHub"
                         data-umami-event="github-click"
@@ -85,6 +86,7 @@
                     <a 
                         href="https://medium.com/@mabd.dev" 
                         target="_blank" 
+                        rel="noopener noreferrer"
                         class="social-link" 
                         aria-label="Medium"
                         data-umami-event="medium-click"
@@ -124,7 +126,38 @@
 
             <!-- Projects Grid -->
             <div id="projects-grid" class="projects-grid">
-                <!-- Projects will be dynamically inserted here by JavaScript -->
+                <noscript>
+                  <div class="project-card">
+                    <div class="project-content">
+                      <div class="project-header">
+                        <h3 class="project-name">Habitsss</h3>
+                        <span class="project-category">Mobile App</span>
+                      </div>
+                      <p class="project-description">A powerful habit tracking app with cloud sync, widgets, and analytics. Built with 100% Jetpack Compose.</p>
+                      <a href="projects/habitsss/index.html" class="project-link">View Project</a>
+                    </div>
+                  </div>
+                  <div class="project-card">
+                    <div class="project-content">
+                      <div class="project-header">
+                        <h3 class="project-name">RepoScan</h3>
+                        <span class="project-category">CLI Tool</span>
+                      </div>
+                      <p class="project-description">A fast CLI tool to scan your system for Git repositories and report uncommitted files, unpushed commits, and unpulled changes.</p>
+                      <a href="https://github.com/mabd-dev/reposcan" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+                    </div>
+                  </div>
+                  <div class="project-card">
+                    <div class="project-content">
+                      <div class="project-header">
+                        <h3 class="project-name">Gira Desktop App</h3>
+                        <span class="project-category">App</span>
+                      </div>
+                      <p class="project-description">Vim-powered Jira client for developers. Keyboard-driven issue management with bulk operations.</p>
+                      <a href="https://github.com/mabd-dev/Gira" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+                    </div>
+                  </div>
+                </noscript>
             </div>
 
             <!-- Empty State -->
@@ -143,7 +176,9 @@
             </div>
 
             <div id="contributions-list" class="contributions-list">
-                <!-- Contributions will be dynamically inserted here by JavaScript -->
+                <noscript>
+                  <p style="text-align: center; color: #e0e0e0; opacity: 0.7;">Open source contributions loaded dynamically. Enable JavaScript to view.</p>
+                </noscript>
             </div>
         </div>
     </section>
@@ -157,7 +192,19 @@
             </div>
 
             <div id="articles-grid" class="articles-grid">
-                <!-- Articles will be dynamically inserted here by JavaScript -->
+                <noscript>
+                  <article class="article-card">
+                    <div class="article-content">
+                      <div class="article-header">
+                        <h3 class="article-title">Building a Vim-Powered Jira Client with Compose Multiplatform &amp; Claude</h3>
+                      </div>
+                      <p class="article-description">Jira is powerful — but painfully slow for keyboard-driven workflows. I built my own keyboard-first Jira client using Compose Multiplatform and a custom Vim engine.</p>
+                      <div class="article-meta">
+                        <span class="article-read-time">13 min read</span>
+                      </div>
+                    </div>
+                  </article>
+                </noscript>
             </div>
         </div>
     </section>
@@ -179,6 +226,7 @@
                     <a 
                         href="https://github.com/mabd-dev" 
                         target="_blank" 
+                        rel="noopener noreferrer"
                         class="footer-link"
                         data-umami-event="github-click"
                         data-umami-event-location="footer"
@@ -186,6 +234,7 @@
                     <a 
                         href="https://medium.com/@mabd.dev" 
                         target="_blank" 
+                        rel="noopener noreferrer"
                         class="footer-link"
                         data-umami-event="medium-click"
                         data-umami-event-location="footer"
