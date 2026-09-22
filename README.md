@@ -53,11 +53,10 @@
     <td valign="top">
       <h3>Habitsss — Android Habit Tracker</h3>
       <p>
-      A production-grade habit tracking application focused on streaks, analytics,
+      A habit tracking application focused on streaks, analytics,
       and long-term consistency.
       </p>
       <p>
-      📱 <strong>350+ real users on Google Play</strong><br />
       🏗️ Built with multi-module clean architecture<br />
       📊 Advanced analytics & widget support<br />
       ⚡ Jetpack Compose + Kotlin
