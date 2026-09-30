@@ -18,3 +18,5 @@ jobs:
           badge-output-path: 'oss-badge.svg'
           badge-style: 'detailed'
           badge-limit: 6
+          exclude-orgs: "getfedo"
+
