@@ -37,85 +37,25 @@
   </tr>
 </table>
 
-<hr />
 
-<h2>📝 Latest Articles</h2>
+## 📝 Latest Articles
 
-<p>
-  I write about <strong>software engineering, Go, AI tooling, and developer productivity</strong>.
-  <br />
-  👉 <a href="https://medium.com/@mabd.dev"><strong>medium.com/@mabd.dev</strong></a>
-</p>
+I write about **software engineering, Go, AI tooling, and developer productivity**.
 
-<table>
-  <tr>
-    <td width="100%" valign="top">
-      <h3>Building a Vim-Powered Jira Client with Compose Multiplatform & Claude</h3>
-      <p>
-        Jira is powerful — but painfully slow for keyboard-driven workflows.
-        As a daily Vim user, I kept reaching for speed that simply wasn’t there… so I built my own keyboard-first Jira client using Compose Multiplatform and a custom Vim engine.
-      </p>
-      <p>
-        🔗 <a href="https://medium.com/@mabd.dev/building-a-vim-powered-jira-client-with-compose-multiplatform-claude-21bbf29477df">Read article</a><br />
-        🔧 Repositories:
-        <a href="https://github.com/mabd-dev/gira">Gira</a><br />
-        📅 Feb 23, 2026 · ⏱ 13 min read<br />
-        🏷️ Vim · Compose Multiplatform · Productivity
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="100%" valign="top">
-      <h3>🧠 Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel</h3>
-      <p>
-        Stop your AI agents from stepping on each other. Git worktrees enable true
-        parallel development with Claude Code, Codex, and other AI tools.
-      </p>
-      <p>
-        🔗 <a href="https://medium.com/@mabd.dev/git-worktrees-the-secret-weapon-for-running-multiple-ai-coding-agents-in-parallel-e9046451eb96">Read article</a><br />
-        📅 Dec 9, 2025 · ⏱ 5 min read<br />
-        🏷️ AI · AI Agents · git-worktrees · vibe-coding
-      </p>
-    </td>
-  </tr>
+- [Adding Image Uploads to a Go Backend: Validation, Resizing, Cloudflare R2, and Orphan Cleanup](https://medium.com/@mabd.dev/adding-image-uploads-to-a-go-backend-validation-resizing-cloudflare-r2-and-orphan-cleanup-cae79a105b5e)
+- [Building a Vim-Powered Jira Client with Compose Multiplatform & Claude](https://medium.com/@mabd.dev/building-a-vim-powered-jira-client-with-compose-multiplatform-claude-21bbf29477df)
+- [I Built a Tool to Track My Open Source Contributions](https://medium.com/@mabd.dev/i-built-a-tool-to-track-my-open-source-contributions-b2af92c955e7)
+- [Building a Search Engine from Scratch: The Inverted Index](https://medium.com/@mabd.dev/building-a-search-engine-from-scratch-the-inverted-index-019c599b3c59)
+- [Git Worktrees: The Secret Weapon for Running Multiple AI Coding Agents in Parallel](https://medium.com/@mabd.dev/git-worktrees-the-secret-weapon-for-running-multiple-ai-coding-agents-in-parallel-e9046451eb96)
 
-  <tr>
-    <td width="100%" valign="top">
-      <h3>🔧 I Built a Tool to Track My Open Source Contributions</h3>
-      <p>
-        GitHub’s contribution graph shows activity—but not impact. I built a tool to
-        track which open-source projects I actually contributed to.
-      </p>
-      <p>
-        🔗 <a href="https://medium.com/@mabd.dev/i-built-a-tool-to-track-my-open-source-contributions-b2af92c955e7">Read article</a><br />
-        🔧 Repositories:
-        <a href="https://github.com/mabd-dev/gh-oss-stats">gh-oss-stats</a>,
-        <a href="https://github.com/mabd-dev/gh-oss-stats-action">gh-oss-stats-action</a><br />
-        📅 Dec 22, 2025 · ⏱ 4 min read<br />
-        🏷️ Go · Custom GitHub Actions · Mobile Development
-      </p>
-    </td>
-  </tr>
 
-  <!--<tr>
-    <td width="100%" valign="top">
-      <h3>🔍 Search Engine from Scratch — Part 1: The Inverted Index</h3>
-      <p>
-        From naive string matching to information retrieval. Building a text-based
-        search engine in Go, one concept at a time.
-      </p>
-      <p>
-        🔗 <a href="https://medium.com/@mabd.dev/building-a-search-engine-from-scratch-the-inverted-index-019c599b3c59">Read article</a><br />
-        🔧 Repository:
-        <a href="https://github.com/mabd-dev/search-engine">search-engine</a><br />
-        📅 Nov 20, 2024 · ⏱ 3 min read<br />
-        🏷️ Search Engine · Go
-      </p>
-    </td>
-  </tr>-->
-</table>
+<a href="https://getfedo.com/blog">
+  <img src="https://img.shields.io/badge/More_on_the_fedo_blog-F4A261?style=for-the-badge&logo=rss&logoColor=white" alt="Read more on the fedo blog" />
+</a>
+<a href="https://medium.com/@mabd.dev">
+  <img src="https://img.shields.io/badge/More_on_Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Read more on Medium" />
+</a>
 
-<hr />
 
 <h2>📊 OSS Contributions</h2>
 <p>
