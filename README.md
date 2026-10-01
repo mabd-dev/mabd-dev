@@ -45,26 +45,17 @@
 
 <table>
   <tr>
-    <td width="260" align="center">
-      <img src="https://raw.githubusercontent.com/mabd-dev/habitsss/main/assets/app-icon.png" width="120" alt="Habitsss icon"/>
-      <br /><br />
-      <img src="https://raw.githubusercontent.com/mabd-dev/habitsss/main/media/thumbnails/boards.jpg" width="200" alt="Habitsss preview"/>
+    <td width="80%" align="center">
+      <a href="https://getfedo.com" target="_blank" >
+        <img width="1200" height="630" alt="getfedo" src="https://github.com/user-attachments/assets/d92aca2a-5743-4ad6-bd1e-80c1d74f4b52" />
+      </a>
     </td>
-    <td valign="top">
-      <h3>Habitsss — Android Habit Tracker</h3>
-      <p>
-      A habit tracking application focused on streaks, analytics,
-      and long-term consistency.
-      </p>
-      <p>
-      🏗️ Built with multi-module clean architecture<br />
-      📊 Advanced analytics & widget support<br />
-      ⚡ Jetpack Compose + Kotlin
-      </p>
-      <p>
-      🔗 <a href="https://github.com/mabd-dev/habitsss"><strong>View Releases</strong></a><br />
-      📥 <a href="https://github.com/mabd-dev/habitsss/releases/latest"><strong>Download APK</strong></a>
-      </p>
+  </tr>
+  <tr>
+    <td width="80%" align="center">
+      <a href="https://habitsss.app" target="_blank" >
+        <img  alt="habitsss" src="https://github.com/user-attachments/assets/71ebe956-e592-400c-a0bf-2cdd9dc9f7d7" />
+      </a>
     </td>
   </tr>
 </table>
