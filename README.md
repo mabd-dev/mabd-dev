@@ -24,35 +24,12 @@
 
 <table>
   <tr>
-    <td valign="top">
-      <h3>Fedo - In-App Feedback SDK</h3>
-      <p>
-      Turn user feedback into a roadmap users vote on. An SDK that lets users
-      submit ideas, vote on features, and track roadmap progress without leaving your app.
-      </p>
-      <p>
-      🧩 One-method native integration - zero UI building<br />
-      🗳️ User voting, comment threads & metadata tracking<br />
-      📋 Dashboard with Kanban workflow (Open → In Review → Planned → In Progress → Shipped)<br />
-      🤖 Android (Kotlin) available now · iOS, Flutter & React Native coming soon
-      </p>
-      <p>
-      🔗 <a href="https://getfedo.com"><strong>getfedo.com</strong></a>
-      </p>
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td width="80%" align="center">
+    <td width="50%" align="center">
       <a href="https://getfedo.com" target="_blank" >
-        <img width="1200" height="630" alt="getfedo" src="https://github.com/user-attachments/assets/d92aca2a-5743-4ad6-bd1e-80c1d74f4b52" />
+        <img alt="getfedo" src="https://github.com/user-attachments/assets/d92aca2a-5743-4ad6-bd1e-80c1d74f4b52" />
       </a>
     </td>
-  </tr>
-  <tr>
-    <td width="80%" align="center">
+    <td width="50%" align="center">
       <a href="https://habitsss.app" target="_blank" >
         <img  alt="habitsss" src="https://github.com/user-attachments/assets/71ebe956-e592-400c-a0bf-2cdd9dc9f7d7" />
       </a>
