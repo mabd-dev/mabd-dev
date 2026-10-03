@@ -35,6 +35,10 @@
       </a>
     </td>
   </tr>
+  <tr>
+    <td><a href="https://getfedo.com">getfedo.com</a></td>
+    <td><a href="https://habitsss.app">habitsss.app</a></td>
+  </tr>
 </table>
 
 
