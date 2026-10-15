@@ -28,10 +28,10 @@
       <a href="https://getfedo.com" target="_blank" >
         <img alt="getfedo" src="https://github.com/user-attachments/assets/d92aca2a-5743-4ad6-bd1e-80c1d74f4b52" />
       </a>
-      <a href="https://getfedo.com" target="_blank">getfedo.com</a>
+      <a href="https://getfedo.com/?utm_source=github&utm_medium=social&utm_content=profile" target="_blank">getfedo.com</a>
     </td>
     <td width="50%" align="center">
-      <a href="https://habitsss.app" target="_blank" >
+      <a href="https://habitsss.app/?utm_source=github&utm_medium=social&utm_content=profile" target="_blank" >
         <img  alt="habitsss" src="https://github.com/user-attachments/assets/71ebe956-e592-400c-a0bf-2cdd9dc9f7d7" />
       </a>
       <a href="https://habitsss.app" target="_blank">habitsss.app</a>
